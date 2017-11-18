@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01AA97">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#01AA97">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:focusable="true" android:focusableInTouchMode="true"
+            >
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="50dp"
+
+                android:background="@drawable/register_logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:paddingLeft="10dp"
+
+
+                android:ems="10"
+                android:id="@+id/first_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="197dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="First Name"
+                android:textColorHint="#a6083d29"
+                android:textColor="#000000"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:maxLength="15" />
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+
+                android:ems="10"
+                android:id="@+id/last_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/first_name"
+                android:layout_marginTop="257dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Last Name"
+                android:textColorHint="#a6083d29"
+                android:textColor="#000000"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:maxLength="15" />
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+
+                android:ems="10"
+                android:id="@+id/signup_phone_number"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/last_name"
+                android:layout_marginTop="317dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Phone Number"
+                android:textColorHint="#a6083d29"
+                android:textColor="#000000"
+                android:maxLength="12"
+                android:phoneNumber="true"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="16dp" />
+
+
+            <Spinner android:layout_width="360dp"
+                android:layout_height="50dp"
+
+                android:id="@+id/spCities"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:dropDownWidth="fill_parent"
+
+
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/signup_phone_number"
+                android:prompt="@string/city_prompt"
+                android:entries="@array/city_arrays"
+                android:paddingRight="10dp">
+
+            </Spinner>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:inputType="textPassword"
+
+
+                android:ems="10"
+                android:id="@+id/signup_password"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/spCities"
+                android:layout_marginTop="437dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Password"
+
+                android:textColorHint="#a6083d29"
+                android:textColor="#000000"
+                android:paddingRight="10dp"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textSize="16dp" />
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:ems="10"
+                android:id="@+id/signup_confirm_password"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/signup_password"
+                android:layout_marginTop="497dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Confirm Password"
+                android:textColorHint="#a6083d29"
+                android:textColor="#000000"
+                android:paddingRight="10dp"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:id="@+id/signup_btn"
+                android:layout_below="@+id/signup_confirm_password"
+                android:layout_marginTop="57dp"
+                android:background="@drawable/btn_shape"
+                android:textColor="#01AA97"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

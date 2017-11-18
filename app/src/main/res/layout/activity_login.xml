@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01AA97">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#01AA97"
+        android:fillViewport="false"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="81dp"
+
+                android:background="@drawable/register_logo"
+                android:id="@+id/linearLayout"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:paddingLeft="10dp"
+                android:focusable="true"
+
+
+                android:ems="10"
+                android:id="@+id/login_phone_number_text"
+                android:inputType="phone"
+                android:background="@drawable/sign_edit_text_shape"
+                android:textColorHint="#a6083d29"
+                android:textColor="#a6083d29"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/ic_phone_icon"
+                android:layout_marginTop="253dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp"
+                android:maxLength="14" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/new_cnfrm_pass_text"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/login_phone_number_text"
+                android:layout_marginTop="315dp"
+                android:background="@drawable/sign_edit_text_shape"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Password"
+                android:textColorHint="#a6083d29"
+                android:textColor="#a6083d29"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/ic_lock_icon"
+                android:textSize="16dp"
+                android:maxLength="15" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password"
+                android:id="@+id/forgot_pass_textview"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_below="@+id/new_cnfrm_pass_text"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="378dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:id="@+id/set_new_pass_btn"
+                android:layout_below="@+id/forgot_pass_textview"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/btn_shape"
+                android:textColor="#01AA97"
+                android:textSize="17.5dp"
+                android:layout_marginTop="430dp"
+                android:layout_alignRight="@+id/new_cnfrm_pass_text"
+                android:layout_alignEnd="@+id/new_cnfrm_pass_text"
+                android:layout_alignLeft="@+id/new_cnfrm_pass_text"
+                android:layout_alignStart="@+id/new_cnfrm_pass_text"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

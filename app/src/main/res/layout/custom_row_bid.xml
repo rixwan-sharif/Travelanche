@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ad7ab5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/main_parent"
+        android:background="#01aa97">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/person"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/bids_image_of_company"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Narcos"
+            android:id="@+id/bids_comp_name_text"
+            android:layout_alignTop="@+id/bids_image_of_company"
+            android:layout_toRightOf="@+id/bids_image_of_company"
+            android:layout_toEndOf="@+id/bids_image_of_company"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Lamb Slamb"
+            android:id="@+id/textView4"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="55dp"
+            android:layout_below="@+id/bids_image_of_company"
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bachat"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/bids_image_of_company"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="55dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="GLI 2009"
+            android:id="@+id/bid_vehicle"
+            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="5000"
+            android:id="@+id/bid_rate_per_day"
+            android:layout_below="@+id/bid_vehicle"
+            android:layout_alignLeft="@+id/bid_vehicle"
+            android:layout_alignStart="@+id/bid_vehicle"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="GLI 2009"
+            android:id="@+id/bid_vehiclee"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="25000"
+            android:id="@+id/bid_total_fare"
+            android:layout_below="@+id/bid_vehiclee"
+            android:layout_alignLeft="@+id/bid_vehiclee"
+            android:layout_alignStart="@+id/bid_vehiclee"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="per/day"
+            android:id="@+id/textView9"
+            android:layout_alignTop="@+id/bid_rate_per_day"
+            android:layout_toRightOf="@+id/bid_rate_per_day"
+            android:layout_toEndOf="@+id/bid_rate_per_day"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="total"
+            android:id="@+id/textView10"
+            android:layout_alignTop="@+id/bid_total_fare"
+            android:layout_toRightOf="@+id/bid_total_fare"
+            android:layout_toEndOf="@+id/bid_total_fare"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accept Bid"
+            android:id="@+id/accept_bid_btn"
+            android:background="@drawable/signin_btn_shape"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

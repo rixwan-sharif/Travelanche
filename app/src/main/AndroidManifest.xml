@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rixwansharif.travelanche" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="ANDROID.PERMISSION.CAMERA" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/title_activity_splash_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main_Page_Activity"
+            android:label="@string/title_activity_main__page_" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".Main_Page_Activity" >
+        </activity>
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="@string/title_activity_registration"
+            android:parentActivityName=".Main_Page_Activity" >
+        </activity>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:parentActivityName=".LoginActivity" >
+        </activity>
+        <activity
+            android:name=".NewPasswordActivity"
+            android:label="@string/title_activity_new_password" >
+        </activity>
+        <activity
+            android:name=".UploadPhotoActivity"
+            android:label="@string/title_activity_upload_photo" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Drawer_Theme" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".TripActivity"
+            android:label="@string/title_activity_trip"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".CompaniesActivity"
+            android:label="@string/title_activity_companies"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ContactUsActivity"
+            android:label="@string/title_activity_contact_us"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".MyTripsActivity"
+            android:label="@string/title_activity_my_trips"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".EditTripActivity"
+            android:label="@string/title_activity_edit_trip"
+            android:parentActivityName=".MyTripsActivity" >
+        </activity>
+        <activity
+            android:name=".BidsOnTripActivity"
+            android:label="@string/title_activity_bids_on_trip" >
+        </activity>
+    </application>
+
+</manifest>

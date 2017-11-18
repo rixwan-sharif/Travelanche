@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/change_pass_dialogue">
+
+    <TextView
+        android:textColor="#01AA97"
+        android:text="Change Your Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <EditText
+        android:id="@+id/dialogue_cpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current Password"
+        android:textColorHint="#a6083d29"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Password"
+        android:textColorHint="#a6083d29"
+        android:id="@+id/dialogue_npass"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:textColorHint="#a6083d29"
+        android:id="@+id/dialogue_cnpass"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/dialogu_change_pass_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+
+        android:padding="12dp"
+        android:text="Change Password"
+        android:background="@drawable/signin_btn_shape"
+        android:textColor="#ffffff">
+
+    </android.support.v7.widget.AppCompatButton>
+
+
+
+</LinearLayout>

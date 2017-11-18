@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/city_dialogue">
+    <TextView
+        android:textColor="#01AA97"
+        android:text="Change Your City"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+         />
+
+    <ScrollView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/scrollView2">
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lahore"
+                android:id="@+id/radio_lhr"
+                android:checked="true"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multan"
+                android:id="@+id/radio_mtn"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Islambad"
+                android:id="@+id/radio_isd"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Karachi"
+                android:id="@+id/radio_khi"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rawalpindi"
+                android:id="@+id/radio_rwp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faislabad"
+                android:id="@+id/radio_fsd"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gujranwala"
+                android:id="@+id/radio_guj"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:layout_marginBottom="12dp" />
+        </RadioGroup>
+      </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trip_back_layout"
+    android:background="@drawable/edit_green"
+    android:orientation="vertical"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true" android:focusableInTouchMode="true">
+
+
+
+
+
+            <TextView
+                android:layout_below="@+id/date_from_lable"
+                android:id="@+id/destination"
+                android:layout_marginTop="25dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+                android:paddingTop="12dp"
+                android:textSize="15dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:hint="Choose Destination"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:paddingRight="15dp"
+                android:textColorHint="#545454" />
+
+            <TextView
+                android:layout_below="@+id/date_from_lable"
+                android:id="@+id/no_of_seats_vehicle"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+                android:paddingTop="12dp"
+                android:textSize="15dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:hint="Choose Vehicle"
+                android:textAlignment="center"
+                android:paddingRight="15dp"
+                android:focusable="false"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:textColorHint="#545454" />
+
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="45dp"
+                android:paddingLeft="16dp"
+                android:ems="10"
+                android:id="@+id/pick_location"
+                android:inputType="textCapSentences"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:textColor="#2a2a2a"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:maxLength="12"
+                android:hint="Choose Pickup Location"
+                android:textAlignment="center"
+                android:paddingTop="12dp"
+                android:textColorHint="#545454" />
+
+            <TextView
+                android:layout_below="@+id/date_from_lable"
+                android:id="@+id/trip_start_date"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+                android:paddingTop="12dp"
+                android:textSize="15dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:paddingRight="15dp"
+                android:textColorHint="#545454"
+                android:hint="Choose Start Date" />
+            <TextView
+                android:layout_below="@+id/Timr_pickup_lable"
+                android:id="@+id/Time_pickup"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+
+                android:textSize="15dp"
+                android:paddingTop="12dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:paddingRight="15dp"
+                android:textColorHint="#545454"
+                android:hint="Choose Pickup Time" />
+
+            <TextView
+                android:layout_below="@+id/date_to_lable"
+                android:id="@+id/trip_end_date"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+
+                android:textSize="15dp"
+                android:paddingTop="12dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:paddingRight="15dp"
+                android:textColorHint="#545454"
+                android:hint="Choose End Date" />
+
+
+
+            <TextView
+                android:layout_below="@+id/Time_pickup"
+                android:id="@+id/Time_drop"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+                android:textSize="15dp"
+                android:paddingTop="12dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:paddingRight="15dp"
+                android:textColorHint="#545454"
+                android:hint="Choose Drop Time" />
+
+
+            <EditText
+                android:layout_below="@+id/Timr_pickup_lable"
+                android:id="@+id/description"
+                android:layout_marginTop="8dp"
+                android:layout_width="340dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="45dp"
+                android:textSize="15dp"
+                android:paddingLeft="16dp"
+                android:textColor="#2a2a2a"
+                android:background="@drawable/plan_trip_textbox_shape"
+                android:singleLine="false"
+                android:hint="Any Descriptions for Trip"
+                android:textAlignment="center"
+                android:paddingRight="25dp"
+                android:inputType="textMultiLine"
+                android:editable="false"
+                android:maxLines="5"
+                android:lines="3"
+                android:maxLength="250"
+                android:scrollbars="vertical"
+                android:textColorHint="#545454"
+                android:radius="10dp"
+                />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:id="@+id/radrio_grp_driver"
+                android:checkedButton="@+id/driver_yes_btn">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver"
+
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Yes"
+                    android:checked="false"
+                    android:textColor="#ffffff"
+                    android:buttonTint="#FFFAFAFA"
+                    android:id="@+id/driver_yes_btn" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="No"
+                    android:id="@+id/driver_no_btn"
+                    android:checked="false"
+                    android:textColor="#ffffff"
+                    android:buttonTint="#FFFAFAFA"
+                    />
+
+            </RadioGroup>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:id="@+id/radrio_grp_ac"
+                android:checkedButton="@+id/ac_yes_btn">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AC"
+
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="52dp"
+                    android:text="Yes"
+                    android:checked="false"
+                    android:id="@+id/ac_yes_btn"
+                    android:textColor="#ffffff"
+                    android:buttonTint="#FFFAFAFA" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="No"
+                    android:checked="false"
+                    android:id="@+id/ac_no_btn"
+                    android:textColor="#ffffff"
+                    android:buttonTint="#FFFAFAFA"
+                    />
+
+            </RadioGroup>
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:text="Post Trip"
+                android:id="@+id/post_trip_btn"
+                android:background="@drawable/signin_btn_shape"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="17.5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

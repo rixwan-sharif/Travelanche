@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Travelanche</string>
+    <string name="title_activity_splash_screen">Travelanche</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main__page_">Main_Page_Activity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_activity_slider">slider</string>
+    <string name="open">Open</string>
+    <string name="close">close</string>
+    <string name="google_maps_key"> AIzaSyDuFgeiU6TK2pMBI8Yt1AJ58Sn6XyjMBDw</string>
+
+
+
+    <string name="city_prompt" >Choose a City</string>
+    <string-array name="city_arrays">
+        <item>City</item>
+        <item>Lahore</item>
+        <item>Faislabad</item>
+        <item>Multan</item>
+        <item>Gujranwala</item>
+        <item>Islambad</item>
+        <item>Karachi</item>
+        <item>Rawalpindi</item>
+    </string-array>
+
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_new_password">NewPasswordActivity</string>
+    <string name="title_activity_logged_in">LoggedInActivity</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_upload_photo">UploadPhotoActivity</string>
+    <string name="title_activity_image_upload">ImageUploadActivity</string>
+    <string name="title_activity_main"></string>
+    <string name="title_activity_setting6">Setting6Activity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_trip">TripActivity</string>
+    <string name="title_activity_companies">CompaniesActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_contact_us">ContactUsActivity</string>
+    <string name="title_activity_my_trips">MyTripsActivity</string>
+    <string name="title_activity_edit_trip">EditTripActivity</string>
+    <string name="title_activity_bids_on_trip">BidsOnTripActivity</string>
+
+</resources>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_row_shape"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Destination :"
+        android:id="@+id/company_name_txt"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="62dp"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/t_d_destination_textview"
+        android:layout_marginLeft="8dp"
+        android:layout_alignBottom="@+id/company_name_txt"
+        android:layout_toRightOf="@+id/company_name_txt"
+        android:layout_toEndOf="@+id/company_name_txt"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trip Details"
+        android:id="@+id/textView15"
+        android:textColor="#1c7c71"
+        android:layout_above="@+id/t_d_destination_textview"
+        android:layout_alignLeft="@+id/company_name_txt"
+        android:layout_alignStart="@+id/company_name_txt"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pickup Location :"
+        android:id="@+id/textView16"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/company_name_txt"
+        android:layout_alignLeft="@+id/company_name_txt"
+        android:layout_alignStart="@+id/company_name_txt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/t_d_pickup_loc_textview"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_toRightOf="@+id/textView16"
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Vehicle :"
+        android:id="@+id/textView20"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_below="@+id/textView16"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/t_d_vehcle_textview"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_toRightOf="@+id/textView20"
+        android:layout_toEndOf="@+id/textView20"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Driver :"
+        android:id="@+id/textView22"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_below="@+id/textView20"
+        android:layout_alignLeft="@+id/textView20"
+        android:layout_alignStart="@+id/textView20"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AC :"
+        android:id="@+id/textView24"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_below="@+id/textView22"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="From"
+        android:id="@+id/textView23"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_below="@+id/textView24"
+        android:layout_alignLeft="@+id/textView24"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/t_d_from_textview"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_toRightOf="@+id/textView23"
+        android:layout_toEndOf="@+id/textView23"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="To"
+        android:id="@+id/textView26"
+        android:textColor="#01AA97"
+        android:textSize="17dp"
+        android:layout_alignBottom="@+id/t_d_from_textview"
+        android:layout_toRightOf="@+id/t_d_from_textview"
+        android:layout_toEndOf="@+id/t_d_from_textview"
+        android:layout_marginLeft="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/t_d_to_textview"
+        android:layout_alignBottom="@+id/textView26"
+        android:layout_toRightOf="@+id/textView26"
+        android:layout_toEndOf="@+id/textView26"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Yes"
+        android:id="@+id/t_d_driver_textview"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_toRightOf="@+id/textView22"
+        android:layout_toEndOf="@+id/textView22"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Yes"
+        android:id="@+id/t_d_ac_textview"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toRightOf="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24"
+        android:layout_marginLeft="8dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/edit_trip_btn"
+        android:src="@drawable/ic_yellow_edit"
+        android:background="#ffffff"
+        android:layout_above="@+id/t_d_destination_textview"
+        android:layout_toLeftOf="@+id/delete_trip_btn"
+        android:layout_toStartOf="@+id/delete_trip_btn"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:paddingBottom="2dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/delete_trip_btn"
+        android:src="@drawable/ic_dustbin_red"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/edit_trip_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="8dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/trip_view_btn"
+        android:src="@drawable/ic_green_eye"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/edit_trip_btn"
+        android:layout_toLeftOf="@+id/edit_trip_btn"
+        android:layout_toStartOf="@+id/edit_trip_btn"
+        android:layout_marginRight="7dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/textView23"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:id="@+id/mytrip_bottom_tab"
+        android:visibility="visible">
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="fill_parent"
+            android:textColor="#ffffff"
+            android:text="Status : Pending"
+            android:background="#01AA97"
+            android:textSize="12dp"
+            android:textAllCaps="false"
+            android:id="@+id/my_trip_status" />
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="2dp"
+            android:background="#01AA97"
+            android:textSize="12dp"
+            android:id="@+id/my_trip_bids">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bids"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="6dp"
+                 />
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/ic_white_cirle"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:text="0"
+
+                android:textColor="#01aa97"
+                android:textSize="11dp"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:id="@+id/bids_on_trip_text"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    <Button
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:textColor="#ffffff"
+            android:text="View"
+            android:background="#01AA97"
+            android:layout_marginLeft="2dp"
+            android:textSize="12dp"
+            android:id="@+id/my_trip_view_detail"
+            android:paddingLeft="12dp"
+            android:paddingRight="13dp"
+            android:drawableRight="@drawable/ic_white_eye"
+            android:textAllCaps="false"
+
+        />
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

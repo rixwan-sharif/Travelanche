@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/dest_city_dialogue">
+    <TextView
+        android:textColor="#01AA97"
+        android:text="Choose Your Destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/scrollView2">
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/destination_radio_grp"
+           >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Islamabad"
+                android:id="@+id/radio_isd_dest"
+                android:checked="false"
+                android:textSize="16dp"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multan"
+                android:id="@+id/radio_mtn_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Murree"
+                android:id="@+id/radio_murr_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kashmir"
+                android:id="@+id/radio_kashmir_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Naran/Kaghan"
+                android:id="@+id/radio_naran_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swat"
+                android:id="@+id/radio_swat_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hunza"
+                android:id="@+id/radio_hunza_dest"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:buttonTint="#01AA97" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/radio_other_pick"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="16dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/primary_dark_material_light"
+                android:buttonTint="#01AA97" />
+
+        </RadioGroup>
+    </ScrollView>
+
+</RelativeLayout>
