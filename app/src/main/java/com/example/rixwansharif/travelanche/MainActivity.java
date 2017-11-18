@@ -3,6 +3,8 @@ package com.example.rixwansharif.travelanche;
 
 
 import android.app.FragmentManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
@@ -17,12 +19,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.internal.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
@@ -331,7 +335,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     public void onError() {
                         //Try again online if cache failed
                         Picasso.with(getApplicationContext())
-                                .load("http://rixwanxharif.000webhostapp.com/"+pic_path)
+                                .load("http://rixwanxharif.000webhostapp.com/" + pic_path)
                                 .into(profile_imageView);
                     }
                 });
@@ -367,6 +371,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return encodedImage;
     }
 
+    public void Notify(View view) {
 
+        NotificationCompat.Builder builder=new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.drawable.ic_green_car_icon);
+        builder.setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_green_car_icon));
+        builder.setContentTitle("Notification");
+        builder.setContentText("this is my first notification");
+
+        builder.setColor(101195);
+        builder.setNumber(9);
+        builder.setPriority(NotificationCompat.PRIORITY_MAX);
+        builder.setAutoCancel(true);
+        builder.setWhen(System.currentTimeMillis());
+
+
+        TaskStackBuilder stackBuilder= TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(MainActivity.class);
+        Intent i=new Intent(this,BidsOnTripActivity.class);
+        stackBuilder.addNextIntent(i);
+
+        //to run
+        PendingIntent pendingIntent=stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(pendingIntent);
+        NotificationManager nm= (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(0,builder.build());
+    }
 
 }
