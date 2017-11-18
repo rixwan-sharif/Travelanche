@@ -134,7 +134,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Accept Bid"
             android:id="@+id/accept_bid_btn"
