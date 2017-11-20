@@ -9,4 +9,9 @@
     <dimen name="activity_main_plan_a_trip_height">120dp</dimen>
     <dimen name="activity_main_plan_my_trips_height">120dp</dimen>
     <dimen name="activity_main_plan_companies_height">120dp</dimen>
+    <dimen name="activity_main__page_sign_up_btn_width">270dp</dimen>
+    <dimen name="activity_main__page_set_new_pass_btn_width">270dp</dimen>
+    <dimen name="activity_main__page_sign_up_btn__textsize">26.25sp</dimen>
+    <dimen name="activity_main__page_set_new_pass_btn_textsize">26.25sp</dimen>
+
 </resources>
