@@ -4,5 +4,9 @@
     <dimen name="activity_login_carlogo_height">117dp</dimen>
     <dimen name="activity_login_login_phone_number_text_height">75dp</dimen>
     <dimen name="activity_login_new_cnfrm_pass_text_height">75dp</dimen>
-    <dimen name="activity_login_forgot_pass_textview">26.25sp</dimen>
+    <dimen name="activity_login_forgot_pass_textview">22.25sp</dimen>
+    <dimen name="activity_login_set_new_pass_btn_text">26.25sp</dimen>
+    <dimen name="activity_main_plan_a_trip_height">120dp</dimen>
+    <dimen name="activity_main_plan_my_trips_height">120dp</dimen>
+    <dimen name="activity_main_plan_companies_height">120dp</dimen>
 </resources>

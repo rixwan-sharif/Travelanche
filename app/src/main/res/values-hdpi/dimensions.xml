@@ -5,5 +5,9 @@
     <dimen name="activity_login_login_phone_number_text_height">37.5dp</dimen>
     <dimen name="activity_login_new_cnfrm_pass_text_height">37.5dp</dimen>
     <dimen name="activity_login_forgot_pass_textview">11.25sp</dimen>
+    <dimen name="activity_login_set_new_pass_btn_text">13.125sp</dimen>
+    <dimen name="activity_main_plan_a_trip_height">60dp</dimen>
+    <dimen name="activity_main_plan_my_trips_height">60dp</dimen>
+    <dimen name="activity_main_plan_companies_height">60dp</dimen>
 
 </resources>

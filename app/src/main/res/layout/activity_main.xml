@@ -30,7 +30,7 @@
                 android:orientation="vertical">
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/activity_main_plan_a_trip_height"
                     android:layout_marginTop="200dp"
                     android:text="Plan Your Trip"
                     android:textColor="#ffffff"
@@ -43,7 +43,7 @@
                     android:id="@+id/plan_a_trip" />
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/activity_main_plan_my_trips_height"
                     android:layout_marginTop="20dp"
                     android:text=" My Trip"
                     android:layout_marginRight="30dp"
