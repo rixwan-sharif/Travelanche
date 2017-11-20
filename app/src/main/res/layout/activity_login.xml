@@ -16,8 +16,8 @@
             android:paddingBottom="20dp">
 
             <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="78dp"
+                android:layout_width="@dimen/activity_login_carlogo_width"
+                android:layout_height="@dimen/activity_login_carlogo_height"
                 android:layout_marginTop="81dp"
 
                 android:background="@drawable/register_logo"
@@ -28,7 +28,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/activity_login_login_phone_number_text_height"
 
                 android:paddingLeft="10dp"
                 android:focusable="true"
@@ -56,7 +56,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
                 android:paddingLeft="10dp"
                 android:inputType="textPassword"
                 android:ems="10"
@@ -85,7 +85,7 @@
                 android:text="Forgot Password"
                 android:id="@+id/forgot_pass_textview"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:layout_below="@+id/new_cnfrm_pass_text"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
@@ -100,7 +100,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/btn_shape"
                 android:textColor="#01AA97"
-                android:textSize="17.5dp"
+                android:textSize="17.5sp"
                 android:layout_marginTop="430dp"
                 android:layout_alignRight="@+id/new_cnfrm_pass_text"
                 android:layout_alignEnd="@+id/new_cnfrm_pass_text"

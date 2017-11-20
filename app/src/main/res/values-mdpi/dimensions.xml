@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_login_carlogo_width">100dp</dimen>
+    <dimen name="activity_login_carlogo_height">39.5dp</dimen>
+    <dimen name="activity_login_login_phone_number_text_height">25dp</dimen>
+    <dimen name="activity_login_new_cnfrm_pass_text_height">25dp</dimen>
+    <dimen name="activity_login_forgot_pass_textview">7.5sp</dimen>
+
+</resources>
