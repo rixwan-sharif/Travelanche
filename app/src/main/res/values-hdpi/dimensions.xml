@@ -13,5 +13,8 @@
     <dimen name="activity_main__page_set_new_pass_btn_width">135dp</dimen>
     <dimen name="activity_main__page_sign_up_btn__textsize">13.125sp</dimen>
     <dimen name="activity_main__page_set_new_pass_btn_textsize">13.125sp</dimen>
+    <dimen name="activity_forgot_password_forgot_pass_phone_text_height">37.5dp</dimen>
+    <dimen name="activity_forgot_password_forgot_set_new_pass_btn_width">90dp</dimen>
+    <dimen name="activity_forgot_password_forgot_set_new_pass_btn_textsize">11.25sp</dimen>
 
 </resources>
