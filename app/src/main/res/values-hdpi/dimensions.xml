@@ -16,5 +16,7 @@
     <dimen name="activity_forgot_password_forgot_pass_phone_text_height">37.5dp</dimen>
     <dimen name="activity_forgot_password_forgot_set_new_pass_btn_width">90dp</dimen>
     <dimen name="activity_forgot_password_forgot_set_new_pass_btn_textsize">11.25sp</dimen>
+    <dimen name="activity_image_upload_imageView_width">225dp</dimen>
+    <dimen name="activity_image_upload_imageView_height">225dp</dimen>
 
 </resources>
