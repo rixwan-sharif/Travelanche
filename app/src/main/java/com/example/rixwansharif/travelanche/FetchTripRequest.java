@@ -16,11 +16,12 @@ public class FetchTripRequest extends StringRequest {
 
 
 
-    public FetchTripRequest(String phone,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
+    public FetchTripRequest(String phone,String trip_status,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
         super(Request.Method.POST,Config.Load_Trips_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
+        params.put("trip_status",trip_status);
     }
 
     @Override

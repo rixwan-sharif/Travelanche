@@ -26,6 +26,8 @@ public class Config {
 
 
     public static final String  Load_Bids_URL = "http://rixwanxharif.000webhostapp.com/load_bids_on_trip.php";
+    public static final String  Accept_Bid_URL = "http://rixwanxharif.000webhostapp.com/accept_bid.php";
+
     //JSON Tag from response from server
     public static final String TAG_RESPONSE= "ErrorMessage";
 
