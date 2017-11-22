@@ -11,13 +11,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="15dp"
+            android:paddingBottom="@dimen/p15"
             android:focusable="true" android:focusableInTouchMode="true"
             >
             <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="78dp"
-                android:layout_marginTop="50dp"
+                android:layout_width="@dimen/activity_login_carlogo_width"
+                android:layout_height="@dimen/activity_login_carlogo_height"
+                android:layout_marginTop="@dimen/m50"
 
                 android:background="@drawable/register_logo"
                 android:layout_alignParentTop="true"
@@ -25,32 +25,32 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
 
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/p10"
 
 
                 android:ems="10"
                 android:id="@+id/first_name"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="197dp"
+                android:layout_marginTop="@dimen/activity_login_carlogo_width"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="First Name"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="16dp"
+                android:textSize="@dimen/p16"
                 android:maxLength="15" />
 
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:paddingLeft="@dimen/p10"
 
                 android:ems="10"
                 android:id="@+id/last_name"
@@ -59,64 +59,64 @@
                 android:layout_below="@id/first_name"
                 android:layout_marginTop="257dp"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="Last Name"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="16dp"
+                android:textSize="@dimen/p16"
                 android:maxLength="15" />
 
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:paddingLeft="@dimen/p10"
 
                 android:ems="10"
                 android:id="@+id/signup_phone_number"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/last_name"
-                android:layout_marginTop="317dp"
+                android:layout_marginTop="@dimen/m315"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="Phone Number"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
                 android:maxLength="12"
                 android:phoneNumber="true"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="16dp" />
+                android:textSize="@dimen/p16" />
 
 
-            <Spinner android:layout_width="360dp"
-                android:layout_height="50dp"
+            <Spinner android:layout_width="@dimen/activity_registration_spinner_width"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
 
                 android:id="@+id/spCities"
 
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_marginRight="@dimen/m20"
                 android:dropDownWidth="fill_parent"
 
 
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/m20"
                 android:layout_below="@+id/signup_phone_number"
                 android:prompt="@string/city_prompt"
                 android:entries="@array/city_arrays"
-                android:paddingRight="10dp">
+                android:paddingRight="@dimen/p10">
 
             </Spinner>
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:paddingLeft="@dimen/p10"
                 android:inputType="textPassword"
 
 
@@ -127,20 +127,20 @@
                 android:layout_below="@id/spCities"
                 android:layout_marginTop="437dp"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="Password"
 
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="16dp" />
+                android:textSize="@dimen/p16" />
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:paddingLeft="10dp"
+                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:paddingLeft="@dimen/p10"
                 android:ems="10"
                 android:id="@+id/signup_confirm_password"
                 android:layout_alignParentTop="true"
@@ -148,8 +148,8 @@
                 android:layout_below="@id/signup_password"
                 android:layout_marginTop="497dp"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="Confirm Password"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
@@ -157,22 +157,22 @@
                 android:inputType="textPassword"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="16dp" />
+                android:textSize="@dimen/p16" />
 
 
             <Button
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/m20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:id="@+id/signup_btn"
                 android:layout_below="@+id/signup_confirm_password"
-                android:layout_marginTop="57dp"
+                android:layout_marginTop="@dimen/m57"
                 android:background="@drawable/btn_shape"
                 android:textColor="#01AA97"
                 android:textStyle="bold"
-                android:textSize="20dp"
-                android:layout_marginRight="20dp" />
+                android:textSize="@dimen/p20"
+                android:layout_marginRight="@dimen/m20" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

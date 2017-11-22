@@ -15,7 +15,7 @@
         android:textSize="@dimen/activity_main__page_sign_up_btn__textsize"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="217dp" />
+        android:layout_marginBottom="@dimen/m217" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:id="@+id/sign_up_textview"
         android:layout_alignTop="@+id/sign_up_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/activity_main_plan_my_trips_height"
         android:text="Already have a Travalanche account?"
 
         android:textColor="#ffffff"
@@ -52,7 +52,7 @@
         android:id="@+id/policytextview1"
         android:layout_below="@+id/set_new_pass_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/m20"
         android:textColor="#ffffff" />
 
     <TextView
@@ -63,5 +63,5 @@
         android:layout_below="@+id/policytextview1"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="@dimen/m5" />
 </RelativeLayout>

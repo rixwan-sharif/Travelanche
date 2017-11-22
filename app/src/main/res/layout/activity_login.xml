@@ -13,12 +13,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp">
+            android:paddingBottom="@dimen/p20">
 
             <LinearLayout
                 android:layout_width="@dimen/activity_login_carlogo_width"
                 android:layout_height="@dimen/activity_login_carlogo_height"
-                android:layout_marginTop="81dp"
+                android:layout_marginTop="@dimen/m85"
 
                 android:background="@drawable/register_logo"
                 android:id="@+id/linearLayout"
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/activity_login_login_phone_number_text_height"
 
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/p10"
                 android:focusable="true"
 
 
@@ -40,42 +40,42 @@
                 android:background="@drawable/sign_edit_text_shape"
                 android:textColorHint="#a6083d29"
                 android:textColor="#a6083d29"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/p8"
                 android:drawableLeft="@drawable/ic_phone_icon"
-                android:layout_marginTop="253dp"
+                android:layout_marginTop="@dimen/m253"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:textSize="16dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
+                android:textSize="@dimen/p16"
                 android:maxLength="14" />
 
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/p10"
                 android:inputType="textPassword"
                 android:ems="10"
                 android:id="@+id/new_cnfrm_pass_text"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/login_phone_number_text"
-                android:layout_marginTop="315dp"
+                android:layout_marginTop="@dimen/m315"
                 android:background="@drawable/sign_edit_text_shape"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginRight="@dimen/m20"
                 android:hint="Password"
                 android:textColorHint="#a6083d29"
                 android:textColor="#a6083d29"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/p8"
                 android:drawableLeft="@drawable/ic_lock_icon"
-                android:textSize="16dp"
+                android:textSize="@dimen/p16"
                 android:maxLength="15" />
 
 
@@ -89,7 +89,7 @@
                 android:layout_below="@+id/new_cnfrm_pass_text"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="378dp"
+                android:layout_marginTop="@dimen/m378"
                 />
             <Button
                 android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
                 android:background="@drawable/btn_shape"
                 android:textColor="#01AA97"
                 android:textSize="@dimen/activity_login_set_new_pass_btn_text"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="@dimen/m430"
                 android:layout_alignRight="@+id/new_cnfrm_pass_text"
                 android:layout_alignEnd="@+id/new_cnfrm_pass_text"
                 android:layout_alignLeft="@+id/new_cnfrm_pass_text"
