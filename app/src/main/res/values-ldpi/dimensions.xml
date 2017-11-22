@@ -68,7 +68,7 @@
     <dimen name="p40">15dp</dimen>
     <dimen name="p41">15.375dp</dimen>
     <dimen name="p42">15.75dp</dimen>
-    <dimen name="p43">16.125</dimen>
+    <dimen name="p43">16.125dp</dimen>
     <dimen name="p44">16.5dp</dimen>
     <dimen name="p45">16.875dp</dimen>
     <dimen name="p46">17.25dp</dimen>
@@ -128,7 +128,7 @@
     <dimen name="m40">15dp</dimen>
     <dimen name="m41">15.375dp</dimen>
     <dimen name="m42">15.75dp</dimen>
-    <dimen name="m43">16.125</dimen>
+    <dimen name="m43">16.125dp</dimen>
     <dimen name="m44">16.5dp</dimen>
     <dimen name="m45">16.875dp</dimen>
     <dimen name="m46">17.25dp</dimen>
