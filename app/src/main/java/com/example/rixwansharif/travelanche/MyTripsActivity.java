@@ -124,7 +124,7 @@ public class MyTripsActivity extends AppCompatActivity{
             SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
             phone_number=sharedPreferences.getString(Config.Phone_SHARED_PREF, "Not Available").toString();
 
-            FetchTripRequest fetchTripRequest = new FetchTripRequest(phone_number, responseListener, errorListener);
+            FetchTripRequest fetchTripRequest = new FetchTripRequest(phone_number,"Pending", responseListener, errorListener);
             RequestQueue queue = Volley.newRequestQueue(MyTripsActivity.this);
             queue.add(fetchTripRequest);
 
@@ -191,10 +191,6 @@ public class MyTripsActivity extends AppCompatActivity{
         private String[] bids_on_trip;
 
         String Phone;
-        String trip_ID,dest,pick_loc,veh,st_dt,end_dt,driver,ac;
-
-        String Trip_Status;
-
         private Activity context;
 
         public custom_row_for_trip(Activity context,String[] trip_id, String[] trip_destination, String[] trip_pickup_location,String[] trip_pick_time,
@@ -218,10 +214,6 @@ public class MyTripsActivity extends AppCompatActivity{
             this.Phone=phone_number;
 
         }
-
-
-
-
 
 
 
@@ -259,8 +251,7 @@ public class MyTripsActivity extends AppCompatActivity{
             from_date.setText(trip_start_date[position]);
             to_date.setText(trip_end_date[position]);
             bids_text.setText(bids_on_trip[position]);
-
-            trip_ID=trip_id[position];
+            my_trip_status_btn.setText("Status: Pending");
 
 
             if(trip_driver[position].equals("1"))
@@ -367,7 +358,7 @@ public class MyTripsActivity extends AppCompatActivity{
                                 @Override
                                 public void onClick(DialogInterface arg0, int arg1)
                                 {
-                                   Delete_Trip();
+                                   Delete_Trip(trip_id[position]);
                                 }
                             });
 
@@ -419,25 +410,6 @@ public class MyTripsActivity extends AppCompatActivity{
                     buttonClick.setDuration(175);
                     v.startAnimation(buttonClick);
 
-
-
-                    if(Trip_Status.equals("Pending"))
-                    {
-
-                    }
-                    else if(Trip_Status.equals("Bid Done"))
-                    {
-
-                    }
-                    else if(Trip_Status.equals("Completed"))
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-
                     //
                 }
             });
@@ -447,7 +419,7 @@ public class MyTripsActivity extends AppCompatActivity{
         }
 
 
-        private void Delete_Trip()
+        private void Delete_Trip(final String Trip_ID)
         {
             if (cd.isConnected()) {
 
@@ -495,7 +467,7 @@ public class MyTripsActivity extends AppCompatActivity{
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
 
-                        params.put("trip_id", trip_ID);
+                        params.put("trip_id", Trip_ID);
                         params.put("phone", Phone);
 
                         return params;

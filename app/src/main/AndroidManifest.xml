@@ -8,12 +8,15 @@
     <uses-permission android:name="ANDROID.PERMISSION.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
-    <supports-screens android:smallScreens="true"
-        android:normalScreens="true"
-        android:largeScreens="true"
-        android:xlargeScreens="true"
+
+    <supports-screens
         android:anyDensity="true"
-        android:resizeable="true"/>
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -98,6 +101,10 @@
         <activity
             android:name=".BidsOnTripActivity"
             android:label="@string/title_activity_bids_on_trip" >
+        </activity>
+        <activity
+            android:name=".AcceptedBidsActivity"
+            android:label="@string/title_activity_accepted_bids" >
         </activity>
     </application>
 

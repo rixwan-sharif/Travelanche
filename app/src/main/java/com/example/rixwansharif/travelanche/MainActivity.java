@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if(id==R.id.my_trips)
         {
-            Intent intent=new Intent(MainActivity.this,MyTripsActivity.class);
+            Intent intent=new Intent(MainActivity.this,AcceptedBidsActivity.class);
             startActivity(intent);
         }
         if(id==R.id.settings)

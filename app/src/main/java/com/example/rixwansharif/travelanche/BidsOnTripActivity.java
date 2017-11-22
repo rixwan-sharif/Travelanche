@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -164,7 +165,6 @@ public class BidsOnTripActivity extends AppCompatActivity {
     public class custom_row_for_bid extends ArrayAdapter<String> {
 
 
-
         private String[] bid_id;
         private String[] vehicle;
         private String[] bachat_price;
@@ -175,25 +175,23 @@ public class BidsOnTripActivity extends AppCompatActivity {
 
         private Activity context;
 
-        public custom_row_for_bid(Activity context,String[] bid_id, String[] vehicle, String[] bachat_price,String[] lambsamb_price,
-                                  String[] company_name,String[] company_phone, String[] company_image)
-        {
-            super(context, R.layout.custom_row_bid,bid_id);
+        public custom_row_for_bid(Activity context, String[] bid_id, String[] vehicle, String[] bachat_price, String[] lambsamb_price,
+                                  String[] company_name, String[] company_phone, String[] company_image) {
+            super(context, R.layout.custom_row_bid, bid_id);
             this.context = context;
 
-            this.bid_id=bid_id;
+            this.bid_id = bid_id;
             this.vehicle = vehicle;
             this.bachat_price = bachat_price;
-            this.lambsamb_price=lambsamb_price;
-            this.company_phone=company_phone;
+            this.lambsamb_price = lambsamb_price;
+            this.company_phone = company_phone;
             this.company_name = company_name;
             this.company_image = company_image;
 
         }
 
         @Override
-        public View getView(final int position, View convertView, ViewGroup parent)
-        {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             final LayoutInflater inflater = context.getLayoutInflater();
             final View listViewItem = inflater.inflate(R.layout.custom_row_bid, null, true);
 
@@ -204,12 +202,12 @@ public class BidsOnTripActivity extends AppCompatActivity {
             TextView rate_per_day_txt = (TextView) listViewItem.findViewById(R.id.bid_rate_per_day);
             TextView total_fare_txt = (TextView) listViewItem.findViewById(R.id.bid_total_fare);
 
-            final ImageView comp_image=(ImageView) listViewItem.findViewById(R.id.bids_image_of_company);
+            final ImageView comp_image = (ImageView) listViewItem.findViewById(R.id.bids_image_of_company);
 
 
-            Button accept_bid=(Button) listViewItem.findViewById(R.id.accept_bid_btn);
+            Button accept_bid = (Button) listViewItem.findViewById(R.id.accept_bid_btn);
 
-          Picasso.with(getApplicationContext())
+            Picasso.with(getApplicationContext())
                     .load("http://rixwanxharif.000webhostapp.com/" + company_image[position])
                     .networkPolicy(NetworkPolicy.OFFLINE)
                     .into(comp_image, new Callback() {
@@ -228,28 +226,21 @@ public class BidsOnTripActivity extends AppCompatActivity {
                     });
 
 
-
-
             company_txt.setText(company_name[position]);
 
-            if(bachat_price[position].equals("0"))
-            {
+            if (bachat_price[position].equals("0")) {
                 rate_per_day_txt.setText("N/A");
                 vehicle_txt.setText("N/A");
 
                 vehiclee_txt.setText(vehicle[position]);
                 total_fare_txt.setText(lambsamb_price[position]);
-            }
-            else if(lambsamb_price[position].equals("0"))
-            {
+            } else if (lambsamb_price[position].equals("0")) {
                 total_fare_txt.setText("N/A");
                 vehiclee_txt.setText("N/A");
 
                 vehicle_txt.setText(vehicle[position]);
                 rate_per_day_txt.setText(bachat_price[position]);
-            }
-            else
-            {
+            } else {
                 vehiclee_txt.setText(vehicle[position]);
                 total_fare_txt.setText(lambsamb_price[position]);
                 vehicle_txt.setText(vehicle[position]);
@@ -263,14 +254,105 @@ public class BidsOnTripActivity extends AppCompatActivity {
                     final AlphaAnimation buttonClick = new AlphaAnimation(1.0F, 0.2F);
                     buttonClick.setDuration(175);
                     v.startAnimation(buttonClick);
-                    //
+
+                    Accept_Bid(company_name[position],company_phone[position],vehicle[position],bachat_price[position],
+                            lambsamb_price[position]);
                 }
             });
 
-            return listViewItem ;
+            return listViewItem;
         }
 
+        private void Accept_Bid(final String _company_name, final String _company_phone, final String _vehicle, final String _bachat_price,
+                                final String _lambsamb_price) {
+
+            if (cd.isConnected()) {
+
+                final ProgressDialog loading = ProgressDialog.show(BidsOnTripActivity.this, "Please Wait", "Please wait...", false, true);
+
+                Timer timer_a = new Timer();
+                timer_a.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+
+
+                        BidsOnTripActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (loading.isShowing()) {
+                                    loading.dismiss();
+
+                                    Toast.makeText(getApplicationContext(), "Something has gone wrong, Try again !", Toast.LENGTH_SHORT).show();
+
+                                }
+
+
+                            }
+
+                        });
+
+
+                    }
+                }, 15000);
+
+
+                //Creating an string request
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Accept_Bid_URL,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                loading.dismiss();
+                                Toast.makeText( BidsOnTripActivity.this, response, Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(BidsOnTripActivity.this,MyTripsActivity.class);
+                                startActivity(intent);
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                loading.dismiss();
+                                Toast.makeText( BidsOnTripActivity.this, "Error!", Toast.LENGTH_SHORT).show();
+                            }
+                        }) {
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<String, String>();
+
+                        params.put("trip_id", Trip_id);
+                        params.put("vehicle", _vehicle);
+                        params.put("company_name",_company_name);
+                        params.put("company_phone", _company_phone);
+                        params.put("rate_per_day", _bachat_price);
+                        params.put("total_fare", _lambsamb_price);
+                        params.put("user_phone",  User_Phone);
+                        return params;
+                    }
+                };
+
+                RequestQueue requestQueue = Volley.newRequestQueue(BidsOnTripActivity.this);
+                requestQueue.add(stringRequest);
+
+            }
+            else
+            {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(BidsOnTripActivity.this);
+
+                //alertDialogBuilder.setTitle("Your Title");
+                alertDialogBuilder
+                        .setMessage("Check Internet Connection !")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                // show it
+                alertDialog.show();
+
+            }
+
+        }
     }
-
-
 }
