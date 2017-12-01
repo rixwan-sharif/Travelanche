@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Trip"
+        android:text="Trip Details"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Naran"
-        android:id="@+id/textView6"
+        android:id="@+id/accepted_bid_dest_text"
         android:layout_below="@+id/textView5"
         android:layout_alignLeft="@+id/textView5"
         android:layout_alignStart="@+id/textView5"
@@ -55,10 +56,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Vehicle"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
+        android:id="@+id/vehicle_lable"
+        android:layout_below="@+id/accepted_bid_dest_text"
+        android:layout_alignLeft="@+id/accepted_bid_dest_text"
+        android:layout_alignStart="@+id/accepted_bid_dest_text"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:textColor="#ffffff" />
@@ -67,60 +68,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Corolla 2009"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView7"
-        android:layout_alignLeft="@+id/textView7"
-        android:layout_alignStart="@+id/textView7"
+        android:id="@+id/accepted_bid_trip_vehicle_text"
+        android:layout_below="@+id/vehicle_lable"
+        android:layout_alignLeft="@+id/vehicle_lable"
+        android:layout_alignStart="@+id/vehicle_lable"
         android:layout_marginTop="5dp"
         android:textSize="12sp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:text="4-seater" />
 
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Driver"
+        android:text="Driver / AC"
         android:id="@+id/textView12"
-        android:layout_below="@+id/textView8"
-        android:layout_alignLeft="@+id/textView8"
-        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@+id/accepted_bid_trip_vehicle_text"
+        android:layout_alignLeft="@+id/accepted_bid_trip_vehicle_text"
+        android:layout_alignStart="@+id/accepted_bid_trip_vehicle_text"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Yes"
-        android:id="@+id/textView13"
-        android:layout_below="@+id/textView12"
-        android:layout_alignLeft="@+id/textView12"
-        android:layout_alignStart="@+id/textView12"
-        android:layout_marginTop="5dp"
-        android:textSize="12sp"
-        android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Yes / Yes"
+            android:id="@+id/accepted_bid_driver_ac_text"
+            android:layout_below="@+id/textView12"
+            android:layout_alignLeft="@+id/textView12"
+            android:layout_alignStart="@+id/textView12"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
-    <TextView
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="AC"
+        android:text="Pickup Time"
         android:id="@+id/textView14"
-        android:layout_below="@+id/textView13"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/accepted_bid_driver_ac_text"
+        android:layout_alignLeft="@+id/accepted_bid_driver_ac_text"
+        android:layout_alignStart="@+id/accepted_bid_driver_ac_text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="YES"
-        android:id="@+id/textView17"
+        android:text="Time"
+        android:id="@+id/accepted_bid_pick_time_text"
         android:layout_below="@+id/textView14"
         android:layout_alignLeft="@+id/textView14"
         android:layout_alignStart="@+id/textView14"
@@ -128,15 +130,42 @@
         android:textSize="12sp"
         android:textColor="#ffffff" />
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Drop Time"
+            android:id="@+id/textView188"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/accepted_bid_pick_time_text"
+            android:layout_alignLeft="@+id/accepted_bid_pick_time_text"
+            android:layout_alignStart="@+id/accepted_bid_pick_time_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Time"
+            android:id="@+id/accepted_bid_drop_time_text"
+            android:layout_below="@+id/textView188"
+            android:layout_alignLeft="@+id/textView188"
+            android:layout_alignStart="@+id/textView188"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:textColor="#ffffff" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Pick up Location"
         android:id="@+id/textView18"
-        android:layout_below="@+id/textView17"
-        android:layout_alignLeft="@+id/textView17"
-        android:layout_alignStart="@+id/textView17"
+        android:layout_below="@+id/accepted_bid_drop_time_text"
+        android:layout_alignLeft="@+id/accepted_bid_drop_time_text"
+        android:layout_alignStart="@+id/accepted_bid_drop_time_text"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:textColor="#ffffff" />
@@ -146,7 +175,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Muslim Town"
-        android:id="@+id/textView19"
+        android:id="@+id/accepted_bid_pick_loc_text"
         android:layout_below="@+id/textView18"
         android:layout_alignLeft="@+id/textView18"
         android:layout_alignStart="@+id/textView18"
@@ -160,9 +189,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Date"
         android:id="@+id/textView21"
-        android:layout_below="@+id/textView19"
-        android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19"
+        android:layout_below="@+id/accepted_bid_pick_loc_text"
+        android:layout_alignLeft="@+id/accepted_bid_pick_loc_text"
+        android:layout_alignStart="@+id/accepted_bid_pick_loc_text"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:textColor="#ffffff" />
@@ -172,7 +201,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="22/7/2017"
-        android:id="@+id/textView25"
+        android:id="@+id/accepted_bid_date_from_text"
         android:layout_below="@+id/textView21"
         android:layout_alignLeft="@+id/textView21"
         android:layout_alignStart="@+id/textView21"
@@ -188,8 +217,8 @@
         android:text="to"
         android:id="@+id/textView27"
         android:textSize="12sp"
-        android:layout_alignBaseline="@+id/textView25"
-        android:layout_alignBottom="@+id/textView25"
+        android:layout_alignBaseline="@+id/accepted_bid_date_from_text"
+        android:layout_alignBottom="@+id/accepted_bid_date_from_text"
         android:layout_alignRight="@+id/textView5"
         android:layout_alignEnd="@+id/textView5"
         android:textColor="#ffffff"
@@ -200,144 +229,214 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="26/7/2017"
-        android:id="@+id/textView28"
+        android:id="@+id/accepted_bid_date_to_text"
         android:layout_alignTop="@+id/textView27"
         android:layout_toRightOf="@+id/textView27"
         android:layout_toEndOf="@+id/textView27"
-        android:layout_marginLeft="2dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginBottom="5dp"
         android:textSize="12sp"
         android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Comapny"
-        android:id="@+id/textView29"
-        android:layout_above="@+id/textView5"
-        android:layout_toRightOf="@+id/textView28"
-        android:layout_toEndOf="@+id/textView28"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="27dp"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Name"
-        android:id="@+id/textView30"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_alignLeft="@+id/textView29"
-        android:layout_alignStart="@+id/textView29"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Number"
-        android:id="@+id/textView31"
-        android:layout_below="@+id/textView30"
-        android:layout_alignLeft="@+id/textView30"
-        android:layout_alignStart="@+id/textView30"
-        android:layout_marginTop="5dp"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Address"
-        android:id="@+id/textView32"
-        android:layout_below="@+id/textView31"
-        android:layout_alignLeft="@+id/textView31"
-        android:layout_alignStart="@+id/textView31"
-        android:layout_marginTop="5dp"
-        android:textColor="#ffffff" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/signin_btn_shape"
-            android:layout_below="@+id/textView28"
+            android:layout_below="@+id/accepted_bid_date_to_text"
 
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Accepted Bid"
+                android:text="Bid Details"
                 android:id="@+id/textView33"
 
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:textColor="#ffffff" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:id="@+id/imageView2"
-                android:layout_below="@+id/textView33"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:background="#ffffff"
-                android:layout_marginBottom="5dp"/>
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Rate/day"
+                android:text="Rate/day (Rs.)"
                 android:id="@+id/textView34"
-                android:layout_alignTop="@+id/imageView2"
+                android:layout_below="@id/textView33"
                 android:layout_alignLeft="@+id/textView33"
                 android:layout_alignStart="@+id/textView33"
                 android:textColor="#ffffff"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="5000 rupees"
-                android:id="@+id/textView35"
+                android:text="5000"
+                android:id="@+id/accepted_bid_rate_text"
                 android:layout_below="@+id/textView34"
                 android:layout_alignLeft="@+id/textView34"
                 android:layout_alignStart="@+id/textView34"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
                 android:textSize="12sp"
-                android:textColor="#ffffff" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Total Bids"
-                android:id="@+id/textView36"
-                android:layout_alignTop="@+id/textView34"
-                android:layout_toRightOf="@+id/textView33"
-                android:layout_toEndOf="@+id/textView33"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
                 android:textColor="#ffffff"
-                android:textStyle="bold" />
+                android:layout_marginBottom="100dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="35"
-                android:id="@+id/textView37"
-                android:layout_alignTop="@+id/textView35"
+                android:text="Total Fare (Rs.)"
+                android:id="@+id/textView38"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textView34"
+                android:layout_toEndOf="@+id/textView34"
+                android:layout_marginLeft="15dp"
+                android:layout_alignTop="@+id/textView34" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Bids"
+                android:id="@+id/textView36"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_alignBottom="@+id/textView38"
+                android:layout_toRightOf="@+id/textView38"
+                android:layout_toEndOf="@+id/textView38"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="5000"
+                android:id="@+id/accepted_bid_total_fare_txt"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/textView38"
+                android:layout_alignLeft="@+id/textView38"
+                android:layout_alignStart="@+id/textView38"
+                android:layout_marginTop="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="5"
+                android:id="@+id/accepted_bid_bids_text"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/textView36"
                 android:layout_alignLeft="@+id/textView36"
                 android:layout_alignStart="@+id/textView36"
+                android:layout_marginTop="7dp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/accepted_bid_vehicle_image"
+                android:background="#ffffff"
+                android:layout_below="@+id/accepted_bid_total_fare_txt"
+                android:layout_alignLeft="@+id/accepted_bid_rate_text"
+                android:layout_alignStart="@+id/accepted_bid_rate_text"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Vehicle Details"
+                android:id="@+id/textView8"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_alignTop="@+id/accepted_bid_vehicle_image"
+                android:layout_toRightOf="@+id/textView34"
+                android:layout_toEndOf="@+id/textView34"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Civic 2013 Oreal"
+                android:id="@+id/accepted_bid_vehicle_detail_text"
+                android:textColor="#ffffff"
+                android:lines="3"
+                android:paddingRight="10dp"
+                android:maxLength="60"
+                android:layout_below="@+id/textView8"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
                 android:textSize="12sp"
-                android:textColor="#ffffff" />
+                android:layout_marginTop="5dp" />
 
         </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Company Details"
+            android:id="@+id/textView29"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="35dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Company Name"
+            android:id="@+id/accepted_bid_comp_name_text"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textView29"
+            android:layout_alignLeft="@+id/textView29"
+            android:layout_alignStart="@+id/textView29"
+            android:layout_marginTop="10dp"
+            android:lines="3"
+            android:paddingRight="10dp"
+            android:maxLength="60" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Contact"
+            android:id="@+id/accepted_bid_comp_number_text"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/accepted_bid_comp_name_text"
+            android:layout_alignLeft="@+id/accepted_bid_comp_name_text"
+            android:layout_alignStart="@+id/accepted_bid_comp_name_text"
+            android:layout_marginTop="5dp"
+            android:maxLength="15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Company Address"
+            android:id="@+id/accepted_bid_comp_address_text"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/accepted_bid_comp_number_text"
+            android:layout_alignLeft="@+id/accepted_bid_comp_number_text"
+            android:layout_alignStart="@+id/accepted_bid_comp_number_text"
+            android:layout_marginTop="5dp"
+            android:lines="3"
+            android:maxLength="60" />
+
     </RelativeLayout>
 
 

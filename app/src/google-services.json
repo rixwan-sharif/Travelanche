@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "556529255839",
+    "firebase_url": "https://travelanche-fd014.firebaseio.com",
+    "project_id": "travelanche-fd014",
+    "storage_bucket": "travelanche-fd014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556529255839:android:2f2240c53ce34651",
+        "android_client_info": {
+          "package_name": "com.example.rixwansharif.travelanche"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556529255839-t7ne6hasv4dl2kht8gtg5rsd73028tk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ON9-tvzcNDFquddY3w9lTMQ_f06aupA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
