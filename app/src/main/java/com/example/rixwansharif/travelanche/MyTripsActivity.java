@@ -500,5 +500,11 @@ public class MyTripsActivity extends AppCompatActivity{
     }
 
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Load_Trip();
+    }
 
 }

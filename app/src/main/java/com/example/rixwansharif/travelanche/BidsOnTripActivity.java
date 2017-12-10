@@ -355,4 +355,11 @@ public class BidsOnTripActivity extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Load_Bids();
+    }
 }

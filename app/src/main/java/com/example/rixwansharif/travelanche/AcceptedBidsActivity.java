@@ -304,4 +304,12 @@ public class AcceptedBidsActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Load_Accepted_Bids();
+    }
+
 }
