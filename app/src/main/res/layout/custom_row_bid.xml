@@ -12,11 +12,11 @@
         android:id="@+id/main_parent"
         android:background="#01aa97">
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/activity_custom_row_bid_bids_image_of_company"
+            android:layout_height="@dimen/activity_custom_row_bid_bids_image_of_company"
             android:background="@drawable/person"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginTop="@dimen/m20"
+            android:layout_marginLeft="@dimen/m40"
             android:id="@+id/bids_image_of_company"
             />
 
@@ -29,8 +29,8 @@
             android:layout_alignTop="@+id/bids_image_of_company"
             android:layout_toRightOf="@+id/bids_image_of_company"
             android:layout_toEndOf="@+id/bids_image_of_company"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/m30"
+            android:layout_marginTop="@dimen/m30"
             android:textColor="#ffffff" />
 
         <TextView
@@ -41,9 +41,9 @@
             android:id="@+id/textView4"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="55dp"
+            android:layout_marginRight="@dimen/m55"
             android:layout_below="@+id/bids_image_of_company"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/m15"
             android:textColor="#ffffff" />
 
         <TextView
@@ -55,8 +55,8 @@
             android:layout_below="@+id/bids_image_of_company"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="55dp"
+            android:layout_marginTop="@dimen/m15"
+            android:layout_marginLeft="@dimen/m55"
             android:textColor="#ffffff" />
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_below="@+id/textView3"
             android:layout_alignLeft="@+id/textView3"
             android:layout_alignStart="@+id/textView3"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/m10"
             android:textColor="#ffffff" />
 
         <TextView
@@ -80,7 +80,7 @@
             android:layout_below="@+id/bid_vehicle"
             android:layout_alignLeft="@+id/bid_vehicle"
             android:layout_alignStart="@+id/bid_vehicle"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/m10"
             android:textColor="#ffffff" />
 
         <TextView
@@ -92,7 +92,7 @@
             android:layout_below="@+id/textView4"
             android:layout_alignLeft="@+id/textView4"
             android:layout_alignStart="@+id/textView4"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/m10"
             android:textColor="#ffffff" />
 
         <TextView
@@ -104,7 +104,7 @@
             android:layout_below="@+id/bid_vehiclee"
             android:layout_alignLeft="@+id/bid_vehiclee"
             android:layout_alignStart="@+id/bid_vehiclee"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/m10"
             android:textColor="#ffffff" />
 
         <TextView
@@ -116,8 +116,8 @@
             android:layout_alignTop="@+id/bid_rate_per_day"
             android:layout_toRightOf="@+id/bid_rate_per_day"
             android:layout_toEndOf="@+id/bid_rate_per_day"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/m5"
+            android:layout_marginLeft="@dimen/m5"
             android:textColor="#ffffff" />
 
         <TextView
@@ -129,8 +129,8 @@
             android:layout_alignTop="@+id/bid_total_fare"
             android:layout_toRightOf="@+id/bid_total_fare"
             android:layout_toEndOf="@+id/bid_total_fare"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/m5"
+            android:layout_marginLeft="@dimen/m5"
             android:textColor="#ffffff" />
 
         <Button
@@ -142,12 +142,12 @@
             android:layout_below="@+id/textView9"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="@dimen/m10"
+            android:layout_marginRight="@dimen/m10"
             android:textAllCaps="false"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/m20"
             android:textColor="#ffffff"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="@dimen/m10" />
 
     </RelativeLayout>
 

@@ -12,7 +12,7 @@
         android:id="@+id/sign_up_btn"
         android:background="@drawable/btn_shape"
         android:textColor="#01AA97"
-        android:textSize="@dimen/activity_main__page_sign_up_btn__textsize"
+        android:textSize="@dimen/s18"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/m217" />
@@ -43,7 +43,7 @@
         android:layout_alignStart="@+id/sign_up_btn"
         android:background="@drawable/btn_shape"
         android:textColor="#01AA97"
-        android:textSize="@dimen/activity_main__page_set_new_pass_btn_textsize" />
+        android:textSize="@dimen/s18" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -14,7 +14,7 @@
         android:id="@+id/buttonUpload"
         android:background="@drawable/signin_btn_shape"
         android:textColor="#ffffff"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="@dimen/m75"
         android:layout_below="@+id/imageView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -22,11 +22,11 @@
         android:layout_alignParentStart="true" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="@dimen/activity_upload_photo_imageView_width"
+        android:layout_height="@dimen/activity_upload_photo_imageView_height"
         android:id="@+id/imageView"
         android:background="@drawable/person"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="@dimen/m33"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
