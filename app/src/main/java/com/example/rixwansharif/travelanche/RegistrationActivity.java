@@ -73,9 +73,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void Signup()
     {
-        Intialize();
+
         if(Validate())
         {
+            Intialize();
             Signup_Process();
 
         }

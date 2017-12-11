@@ -391,12 +391,10 @@ public class SettingActivity extends AppCompatActivity {
                 public void onResponse(String response)
                 {
                     //Disimissing the progress dialog
-
+                    Toast.makeText(SettingActivity.this, response, Toast.LENGTH_LONG).show();
 
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
-
-
                         loading.dismiss();
 
                       if ((jsonResponse.getString("response").equalsIgnoreCase("success"))) {
@@ -406,10 +404,6 @@ public class SettingActivity extends AppCompatActivity {
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.putString(Config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
                             editor.commit();
-
-                          //Save_new_image(jsonResponse.getString("image_path").toString());
-
-
 
                         }
                         else {
@@ -438,15 +432,11 @@ public class SettingActivity extends AppCompatActivity {
                 }
             };
 
-
-
             String string_image = getStringImage(bitmap);
 
             ChangeImageRequest changeImageRequest = new ChangeImageRequest(phone_number,string_image,old_image_link , responseListener, errorListener);
             RequestQueue queue = Volley.newRequestQueue(SettingActivity.this);
             queue.add(changeImageRequest);
-
-
 
         }
         else
@@ -743,7 +733,6 @@ public class SettingActivity extends AppCompatActivity {
                     public void onSuccess() {
 
                     }
-
                     @Override
                     public void onError() {
                         //Try again online if cache failed
@@ -752,8 +741,6 @@ public class SettingActivity extends AppCompatActivity {
                                 .into(profile_imgview);
                     }
                 });
-
-
     }
 
     //decode string to Bitmap
@@ -768,7 +755,7 @@ public class SettingActivity extends AppCompatActivity {
 
     public String getStringImage(Bitmap bmp){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, 80, baos);
+        bmp.compress(Bitmap.CompressFormat.JPEG, 50, baos);
         byte[] imageBytes = baos.toByteArray();
         String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 

@@ -232,24 +232,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mylayout.closeDrawer(GravityCompat.START);
         return true;
     }
-    //back key
-    @Override
-    public void onBackPressed()
-    {
-
-        if(mylayout.isDrawerOpen(GravityCompat.START))
-        {
-            mylayout.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
-            moveTaskToBack(true);
-            finishAffinity();
-        }
-    }
-
-
-
 
     //logout function
 
@@ -345,16 +327,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+    //
 
 
-
-
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-      Set_profile();
-    }
 
     public static Bitmap getBitmapImage(String input) {
         byte[] decodedByte = Base64.decode(input, 0);
@@ -396,6 +371,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         builder.setContentIntent(pendingIntent);
         NotificationManager nm= (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         nm.notify(0,builder.build());
+    }
+
+
+
+
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+      Set_profile();
+    }
+
+    //back key
+    @Override
+    public void onBackPressed()
+    {
+
+        if(mylayout.isDrawerOpen(GravityCompat.START))
+        {
+            mylayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {
+            moveTaskToBack(true);
+            finishAffinity();
+        }
     }
 
 }
