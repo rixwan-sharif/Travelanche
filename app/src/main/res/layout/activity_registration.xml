@@ -43,7 +43,7 @@
                 android:textColor="#000000"
                 android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="@dimen/p16"
+                android:textSize="@dimen/s16"
                 android:maxLength="15" />
 
 
@@ -66,7 +66,7 @@
                 android:textColor="#000000"
                 android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="@dimen/p16"
+                android:textSize="@dimen/s16"
                 android:maxLength="15" />
 
 
@@ -91,7 +91,7 @@
                 android:phoneNumber="true"
                 android:paddingRight="@dimen/p10"
                 android:singleLine="true"
-                android:textSize="@dimen/p16" />
+                android:textSize="@dimen/s16" />
 
 
             <Spinner android:layout_width="@dimen/activity_registration_spinner_width"
@@ -136,7 +136,7 @@
                 android:paddingRight="@dimen/p10"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="@dimen/p16" />
+                android:textSize="@dimen/s16" />
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
@@ -157,7 +157,7 @@
                 android:inputType="textPassword"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="@dimen/p16" />
+                android:textSize="@dimen/s16" />
 
 
             <Button
@@ -171,7 +171,7 @@
                 android:background="@drawable/btn_shape"
                 android:textColor="#01AA97"
                 android:textStyle="bold"
-                android:textSize="@dimen/p20"
+                android:textSize="@dimen/s20"
                 android:layout_marginRight="@dimen/m20" />
         </RelativeLayout>
     </ScrollView>

@@ -6,13 +6,143 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:id="@+id/pickup_location_dialogue">
+<<<<<<< HEAD
+=======
+    <TextView
+        android:textColor="#01AA97"
+        android:text="Change Your Pickup Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/s17"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+        android:lines="2" />
+>>>>>>> b698dc3ee2e8d46d69ce1b08f688163100b8d670
 
     <ListView
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:id="@+id/pickup_locations_listView"
         android:layout_centerHorizontal="true"
         android:divider="#01AA97"
         android:dividerHeight="0.5sp"/>
+=======
+        android:layout_height="@dimen/activity_image_upload_imageView_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m40"
+        android:id="@+id/scrollView2">
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/m10"
+            android:id="@+id/pickup_loc_radio_grp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Johar Town"
+                android:id="@+id/radio_johar_town_pick"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model Town"
+                android:id="@+id/radio_model_town_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iqbal Town"
+                android:id="@+id/radio_iqbal_town_pick"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Township"
+                android:id="@+id/radio_township_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muslim Town"
+                android:id="@+id/radio_muslim_town_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faisal Town"
+                android:id="@+id/radio_faisal_town_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thokar Niaz Biag"
+                android:id="@+id/radio_thokar_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shalamar"
+                android:id="@+id/radio_shalamr_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Defence"
+                android:id="@+id/radio_defence_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/radio_other_pick"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:layout_marginBottom="@dimen/m12"
+                android:buttonTint="#01AA97" />
+        </RadioGroup>
+    </ScrollView>
+>>>>>>> b698dc3ee2e8d46d69ce1b08f688163100b8d670
 
 </RelativeLayout>

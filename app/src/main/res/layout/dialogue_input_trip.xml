@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="16sp" />
+        android:textSize="@dimen/s16" />
 
     <EditText
         android:id="@+id/dialogue_input_trip_custome_trip_edittext"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:hint="Text"
         android:textColorHint="#a6083d29"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/m15"
         android:textColor="#000000"
         android:inputType="textCapSentences"
         android:maxLength="30" />
@@ -33,10 +33,10 @@
         android:id="@+id/dialogue_input_trip_custome_trip_btn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="@dimen/m24"
+        android:layout_marginTop="@dimen/m16"
 
-        android:padding="12dp"
+        android:padding="@dimen/p12"
         android:text="OK"
         android:background="@drawable/signin_btn_shape"
         android:textColor="#ffffff">

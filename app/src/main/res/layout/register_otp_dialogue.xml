@@ -26,10 +26,10 @@
         android:id="@+id/dialogu_buttonConfirm"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="@dimen/m24"
+        android:layout_marginTop="@dimen/m24"
 
-        android:padding="12dp"
+        android:padding="@dimen/p12"
         android:text="Confirm"
         android:background="@drawable/signin_btn_shape"
         android:textColor="#ffffff">

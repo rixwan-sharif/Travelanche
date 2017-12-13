@@ -50,7 +50,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginLeft="@dimen/m20"
                 android:layout_marginRight="@dimen/m20"
-                android:textSize="@dimen/p16"
+                android:textSize="@dimen/s16"
                 android:maxLength="14" />
 
 
@@ -75,7 +75,7 @@
                 android:singleLine="true"
                 android:drawablePadding="@dimen/p8"
                 android:drawableLeft="@drawable/ic_lock_icon"
-                android:textSize="@dimen/p16"
+                android:textSize="@dimen/s16"
                 android:maxLength="15" />
 
 
@@ -85,7 +85,7 @@
                 android:text="Forgot Password"
                 android:id="@+id/forgot_pass_textview"
                 android:textColor="#ffffff"
-                android:textSize="@dimen/activity_login_forgot_pass_textview"
+                android:textSize="@dimen/s15"
                 android:layout_below="@+id/new_cnfrm_pass_text"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
@@ -100,7 +100,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@drawable/btn_shape"
                 android:textColor="#01AA97"
-                android:textSize="@dimen/activity_login_set_new_pass_btn_text"
+                android:textSize="@dimen/s18"
                 android:layout_marginTop="@dimen/m430"
                 android:layout_alignRight="@+id/new_cnfrm_pass_text"
                 android:layout_alignEnd="@+id/new_cnfrm_pass_text"

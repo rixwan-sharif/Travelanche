@@ -97,31 +97,27 @@ public class NewPasswordActivity extends AppCompatActivity {
 
 
         boolean valid=true;
-        if( new_password.length() == 0 )
+
+        if(password.length()<6 && password.length()!=0)
         {
-            new_pass_text.setError("Password is required");
-            new_pass_text.requestFocus();
+            password_text.setError("Password should be atleast of 6 charactors");
+            password_text.requestFocus();
             valid=false;
         }
-        if( confirm_new_password.length() == 0 )
+        if( confirm_password.length() == 0 )
         {
-            cnfrm_new_pass_text.setError("Password is required");
-           cnfrm_new_pass_text.requestFocus();
+            confirm_password_text.setError("Password is required");
+            confirm_password_text.requestFocus();
             valid=false;
         }
 
-        if(!new_password.equals(confirm_new_password))
+        if(!password.equals(confirm_password))
         {
-            cnfrm_new_pass_text.setError("Password Not matched");
-            cnfrm_new_pass_text.requestFocus();
+            confirm_password_text.setError("Password Not matched");
+            confirm_password_text.requestFocus();
             valid=false;
         }
-        if(new_password.length()<6)
-        {
-            new_pass_text.setError("Password should be atleast of 6 charactors");
-            new_pass_text.requestFocus();
-            valid=false;
-        }
+
 
 
 

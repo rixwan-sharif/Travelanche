@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         pass_text=(EditText) findViewById(R.id.new_cnfrm_pass_text);
 
 
-        //prefix
+        //prefix of +92
         phone_text.setText("+92 ");
         Selection.setSelection(phone_text.getText(), phone_text.getText().length());
         phone_text.addTextChangedListener(new TextWatcher() {
@@ -104,12 +104,9 @@ public class LoginActivity extends AppCompatActivity {
                 if(!s.toString().startsWith("+92 ")){
                     phone_text.setText("+92 ");
                     Selection.setSelection(phone_text.getText(), phone_text.getText().length());
-
                 }
-
             }
         });
-
 
         //Underline Text
         forgot_pass_text.setPaintFlags(forgot_pass_text.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
@@ -159,9 +156,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private void Login()
     {
-        Intialize();
+
         if(Validate())
         {
+            Intialize();
             Login_Process();
 
         }
@@ -179,7 +177,7 @@ public class LoginActivity extends AppCompatActivity {
 
         boolean valid=true;
 
-        if( phone_number.length() < 12)
+        if( phone_number.length() < 14)
         {
 
             phone_text.setError("Phone Number is Required");
@@ -204,20 +202,12 @@ public class LoginActivity extends AppCompatActivity {
     {
         String Temp="";
 
-        if(phone_text.getText().length()>4) {
+        for (int i = 4; i < phone_text.getText().length(); i++) {
 
-            for (int i = 4; i < phone_text.getText().length(); i++) {
-
-                    Temp = Temp + phone_text.getText().toString().trim().charAt(i);
-                }
-            phone_number="92"+Temp;
+            Temp = Temp + phone_text.getText().toString().trim().charAt(i);
         }
-        else {
-            phone_number = "";
-        }
-
+        phone_number="92"+Temp;
         password=pass_text.getText().toString().trim();
-
     }
 
 

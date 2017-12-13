@@ -12,18 +12,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="@dimen/s18"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/scrollView2"
         android:layout_alignStart="@+id/scrollView2"
          />
 
     <ScrollView
-        android:layout_width="200dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/activity_login_carlogo_width"
+        android:layout_height="@dimen/activity_image_upload_imageView_width"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/m40"
         android:id="@+id/scrollView2">
 
 
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="@dimen/m10">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -40,62 +40,62 @@
                 android:text="Lahore"
                 android:id="@+id/radio_lhr"
                 android:checked="true"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Multan"
                 android:id="@+id/radio_mtn"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Islambad"
                 android:id="@+id/radio_isd"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Karachi"
                 android:id="@+id/radio_khi"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rawalpindi"
                 android:id="@+id/radio_rwp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Faislabad"
                 android:id="@+id/radio_fsd"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp" />
+                android:textSize="@dimen/s16" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gujranwala"
                 android:id="@+id/radio_guj"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/m8"
                 android:checked="false"
-                android:textSize="16dp"
-                android:layout_marginBottom="12dp" />
+                android:textSize="@dimen/s16"
+                android:layout_marginBottom="@dimen/m12" />
         </RadioGroup>
       </ScrollView>
 

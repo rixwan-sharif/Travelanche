@@ -9,6 +9,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -48,7 +51,33 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         send_code_btn=(Button) findViewById(R.id.set_new_pass_btn);
         phone_number_text=(EditText) findViewById(R.id.forgot_pass_phone_text);
 
-        //
+
+        //prefix of +92
+        phone_number_text.setText("+92 ");
+        Selection.setSelection(phone_number_text.getText(), phone_number_text.getText().length());
+        phone_number_text.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!s.toString().startsWith("+92 ")){
+                    phone_number_text.setText("+92 ");
+                    Selection.setSelection(phone_number_text.getText(), phone_number_text.getText().length());
+                }
+            }
+        });
 
         send_code_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,31 +93,30 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
     private void Send_Code()
     {
-        Intialize();
+
         if(Validate())
         {
+            Intialize();
             Send_Code_Process();
 
         }
         else
         {
-           // Toast.makeText(getApplicationContext(), "Failed to Send ", Toast.LENGTH_SHORT).show();
-
-
+           Toast.makeText(getApplicationContext(), "Failed to Send ", Toast.LENGTH_SHORT).show();
         }
     }
 
     private boolean Validate()
     {
-
-
         boolean valid = true;
-        if (phone_number.length() == 0 || phone_number.length() > 12) {
+        if( phone_number.length() < 14)
+        {
 
             phone_number_text.setError("Phone Number is Required");
             phone_number_text.requestFocus();
-            valid = false;
+            valid=false;
         }
+
         return valid;
     }
 
@@ -98,8 +126,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private void Intialize()
     {
 
-        phone_number=phone_number_text.getText().toString().trim();
+        String Temp="";
+        for (int i = 4; i < phone_number_text.getText().length(); i++) {
 
+            Temp = Temp + phone_number_text.getText().toString().trim().charAt(i);
+        }
+        phone_number="92"+Temp;
     }
 
     //

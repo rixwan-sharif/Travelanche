@@ -425,10 +425,11 @@ public class EditTripActivity extends AppCompatActivity {
 
     private void Edit_Trip()
     {
-        Initialize();
+
         if(Validate())
         {
 
+            Initialize();
             Trip_Days=Calculate_Days(startdate, enddate);
             Edit_Trip_Process();
 

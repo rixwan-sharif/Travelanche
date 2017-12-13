@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:id="@+id/vehicle_dialogue">
+<<<<<<< HEAD
 
 
 
@@ -17,5 +18,107 @@
         android:divider="#01AA97"
         android:dividerHeight="0.5sp"/>
 
+=======
+    <TextView
+        android:textColor="#01AA97"
+        android:text="Select Vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/s18"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+    />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_image_upload_imageView_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m40"
+        android:id="@+id/scrollView2">
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/m10"
+            android:id="@+id/vehicle_radio_grp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4-Seater"
+                android:id="@+id/radio_lhr"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8-Seater"
+                android:id="@+id/radio_mtn"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12-Seater"
+                android:id="@+id/radio_isd"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15-Seater"
+                android:id="@+id/radio_khi"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18-Seater"
+                android:id="@+id/radio_rwp"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23-Seater"
+                android:id="@+id/radio_fsd"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:buttonTint="#01AA97" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32-Seater"
+                android:id="@+id/radio_guj"
+                android:layout_marginTop="@dimen/m8"
+                android:checked="false"
+                android:textSize="@dimen/s16"
+                android:layout_marginBottom="@dimen/m12"
+                android:buttonTint="#01AA97" />
+        </RadioGroup>
+    </ScrollView>
+>>>>>>> b698dc3ee2e8d46d69ce1b08f688163100b8d670
 
 </RelativeLayout>

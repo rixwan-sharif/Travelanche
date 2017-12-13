@@ -8,6 +8,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -54,9 +57,38 @@ public class RegistrationActivity extends AppCompatActivity {
         password_text=(EditText) findViewById(R.id.signup_password);
         confirm_password_text=(EditText) findViewById(R.id.signup_confirm_password);
 
-        sign_up=(Button) findViewById(R.id.signup_btn);
-        //Listener for sign up
 
+        //prefix of +92
+        phone_number_text.setText("+92 ");
+        Selection.setSelection(phone_number_text.getText(), phone_number_text.getText().length());
+        phone_number_text.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!s.toString().startsWith("+92 ")){
+                    phone_number_text.setText("+92 ");
+                    Selection.setSelection(phone_number_text.getText(), phone_number_text.getText().length());
+                }
+            }
+        });
+
+
+
+        //Listener for sign up
+        sign_up=(Button) findViewById(R.id.signup_btn);
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,8 +98,6 @@ public class RegistrationActivity extends AppCompatActivity {
                 Signup();
             }
         });
-
-
 
     }
 
@@ -114,14 +144,13 @@ public class RegistrationActivity extends AppCompatActivity {
             last_name_text.requestFocus();
             valid=false;
         }
-        if( phone_number.length() == 0 || phone_number.length()>12)
+        if( phone_number.length() < 14)
         {
 
-            phone_number_text.setError("Enter Valid Phone Number");
+            phone_number_text.setError("Phone Number is Required");
             phone_number_text.requestFocus();
             valid=false;
         }
-
 
         if( password.length() == 0 )
         {
@@ -161,10 +190,16 @@ public class RegistrationActivity extends AppCompatActivity {
 
         first_name=first_name_text.getText().toString().trim();
         last_name=last_name_text.getText().toString().trim();
-        phone_number=phone_number_text.getText().toString().trim();
         city = city_text.getSelectedItem().toString().trim();
         password=password_text.getText().toString().trim();
         confirm_password=confirm_password_text.getText().toString().trim();
+
+        String Temp="";
+        for (int i = 4; i < phone_number_text.getText().length(); i++) {
+
+            Temp = Temp + phone_number_text.getText().toString().trim().charAt(i);
+        }
+        phone_number="92"+Temp;
     }
 
 
