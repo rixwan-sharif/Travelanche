@@ -18,10 +18,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -247,20 +250,22 @@ public class EditTripActivity extends AppCompatActivity {
         alertDialogBuilder.setView(_Dialog);
         //Creating an alert dialog
         final android.support.v7.app.AlertDialog dest_inputDialog = alertDialogBuilder.create();
-        // show it
-        dest_inputDialog.show();
-        dest_inputDialog.setCanceledOnTouchOutside(false);
-        //dest_inputDialog.getWindow().setLayout(600, 800);
 
-        RadioGroup radioGroup_dest= (RadioGroup) _Dialog.findViewById(R.id.destination_radio_grp);
-        radioGroup_dest.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        //get string array from source
+        String[] citesArray = getResources().getStringArray(R.array.destination_city_array);
+
+        final ListView list = (ListView) _Dialog.findViewById(R.id.cities_listView);
+        list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, citesArray));
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // checkedId is the RadioButton selected
-                RadioButton temp_radiobtn = (RadioButton) _Dialog.findViewById(checkedId);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
                 dest_inputDialog.dismiss();
+                String selectedFromList = (list.getItemAtPosition(position).toString());
 
-                if((temp_radiobtn.getText().toString().trim()).equals("Other"))
+                if((selectedFromList.equals("Other")))
                 {
                     LayoutInflater li = LayoutInflater.from(EditTripActivity.this);
 
@@ -298,11 +303,13 @@ public class EditTripActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    destination.setText(temp_radiobtn.getText());
-                }
+                    destination.setText(selectedFromList);
+                }}});
 
-            }
-        });
+        // show it
+        dest_inputDialog.show();
+        dest_inputDialog.setCanceledOnTouchOutside(false);
+        dest_inputDialog.getWindow().setLayout(600, 800);
     }
 
     private void Set_Vehicle()
@@ -319,22 +326,26 @@ public class EditTripActivity extends AppCompatActivity {
         alertDialogBuilder.setView(_Dialog);
         //Creating an alert dialog
         final android.support.v7.app.AlertDialog vehicle_inputDialog = alertDialogBuilder.create();
+
+
+        String[] vehicleArray = getResources().getStringArray(R.array.vehicle_array);
+
+        final ListView list = (ListView) _Dialog.findViewById(R.id.vehilces_listView);
+        list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, vehicleArray));
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                vehicle_inputDialog.dismiss();
+                String selectedFromList = (list.getItemAtPosition(position).toString());
+                vehicle.setText(selectedFromList);
+            }
+        });
+
         // show it
         vehicle_inputDialog.show();
         vehicle_inputDialog.setCanceledOnTouchOutside(false);
         //vehicle_inputDialog.getWindow().setLayout(550, 700);
-
-        RadioGroup radioGroup_vehicle = (RadioGroup) _Dialog.findViewById(R.id.vehicle_radio_grp);
-        radioGroup_vehicle.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // checkedId is the RadioButton selected
-                RadioButton temp_radiobtn = (RadioButton) _Dialog.findViewById(checkedId);
-                vehicle_inputDialog.dismiss();
-                vehicle.setText(temp_radiobtn.getText());
-
-            }
-        });
     }
 
     private void Set_Pickup_Location()
@@ -352,21 +363,19 @@ public class EditTripActivity extends AppCompatActivity {
         alertDialogBuilder.setView(_Dialog);
         //Creating an alert dialog
         final android.support.v7.app.AlertDialog pickup_loc_inputDialog = alertDialogBuilder.create();
-        // show it
-        pickup_loc_inputDialog.show();
-        pickup_loc_inputDialog.setCanceledOnTouchOutside(false);
-        //pickup_loc_inputDialog.getWindow().setLayout(600, 800);
+        //get string array from source
+        String[] pickupLocationArray = getResources().getStringArray(R.array.pickup_location_array);
 
-        RadioGroup radioGroup_pickup_loc= (RadioGroup) _Dialog.findViewById(R.id.pickup_loc_radio_grp);
-        radioGroup_pickup_loc.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        final ListView list = (ListView) _Dialog.findViewById(R.id.pickup_locations_listView);
+        list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, pickupLocationArray));
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // checkedId is the RadioButton selected
-                RadioButton temp_radiobtn = (RadioButton) _Dialog.findViewById(checkedId);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 pickup_loc_inputDialog.dismiss();
+                String selectedFromList = (list.getItemAtPosition(position).toString());
 
-                if((temp_radiobtn.getText().toString().trim()).equals("Other"))
-                {
+                if ((selectedFromList.equals("Other"))) {
                     LayoutInflater li = LayoutInflater.from(EditTripActivity.this);
 
                     //Creating a view to get the dialog box
@@ -374,19 +383,19 @@ public class EditTripActivity extends AppCompatActivity {
 
                     //Initizliaing confirm button fo dialog box and edittext of dialog box
                     Button temp_dialogue_btn = (AppCompatButton) _Dialog.findViewById(R.id.dialogue_input_trip_custome_trip_btn);
-                    final EditText temp_dialogue_edittext=(EditText) _Dialog.findViewById(R.id.dialogue_input_trip_custome_trip_edittext);
-                    TextView temp_dialogue_textview=(TextView) _Dialog.findViewById(R.id.dialogue_input_trip_custome_trip_textview);
+                    final EditText temp_dialogue_edittext = (EditText) _Dialog.findViewById(R.id.dialogue_input_trip_custome_trip_edittext);
+                    TextView temp_dialogue_textview = (TextView) _Dialog.findViewById(R.id.dialogue_input_trip_custome_trip_textview);
 
 
-                    temp_dialogue_textview.setText("Enter Pickup Location");
-                    temp_dialogue_edittext.setHint("Your Pickup Location");
+                    temp_dialogue_textview.setText("Enter Destination");
+                    temp_dialogue_edittext.setHint("Your Destination");
 
                     //Creating an alertdialog builder
                     android.support.v7.app.AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(EditTripActivity.this);
                     //Adding our dialog box to the view of alert dialog
                     alertDialogBuilder.setView(_Dialog);
                     //Creating an alert dialog
-                    final android.support.v7.app.AlertDialog temp_inputDialog= alertDialogBuilder.create();
+                    final android.support.v7.app.AlertDialog temp_inputDialog = alertDialogBuilder.create();
                     // show it
                     temp_inputDialog.show();
                     temp_inputDialog.setCanceledOnTouchOutside(false);
@@ -400,15 +409,16 @@ public class EditTripActivity extends AppCompatActivity {
                         }
                     });
 
+                } else {
+                    pickup_location.setText(selectedFromList);
                 }
-                else
-                {
-                    pickup_location.setText(temp_radiobtn.getText());
-                }
-
-
             }
         });
+
+        // show it
+        pickup_loc_inputDialog.show();
+        pickup_loc_inputDialog.setCanceledOnTouchOutside(false);
+        //pickup_loc_inputDialog.getWindow().setLayout(600, 800);
 
     }
 

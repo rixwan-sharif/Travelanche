@@ -108,7 +108,7 @@
                 android:layout_marginLeft="@dimen/m20"
                 android:layout_below="@+id/signup_phone_number"
                 android:prompt="@string/city_prompt"
-                android:entries="@array/city_arrays"
+                android:entries="@array/destination_city_array"
                 android:paddingRight="@dimen/p10">
 
             </Spinner>
