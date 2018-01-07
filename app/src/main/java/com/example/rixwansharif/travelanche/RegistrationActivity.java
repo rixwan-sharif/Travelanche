@@ -126,7 +126,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         boolean valid=true;
-        if( first_name.length() == 0 || first_name.length()>32)
+        if( first_name_text.getText().length() == 0 || first_name_text.getText().length()>32)
         {
 
             first_name_text.setError("Please Enter Valid First Name");
@@ -135,16 +135,13 @@ public class RegistrationActivity extends AppCompatActivity {
 
         }
 
-
-
-
-        if( last_name.length() == 0 || last_name.length()>32)
+        if( last_name_text.getText().length() == 0 || last_name_text.getText().length()>32)
         {
             last_name_text.setError("Please Enter Valid Last Name");
             last_name_text.requestFocus();
             valid=false;
         }
-        if( phone_number.length() < 14)
+        if( phone_number_text.getText().length() < 14)
         {
 
             phone_number_text.setError("Phone Number is Required");
@@ -152,34 +149,31 @@ public class RegistrationActivity extends AppCompatActivity {
             valid=false;
         }
 
-        if( password.length() == 0 )
+        if( password_text.getText().length() == 0 )
         {
             password_text.setError("Password is required");
             password_text.requestFocus();
             valid=false;
         }
-        if( confirm_password.length() == 0 )
+        if( confirm_password_text.getText().length() == 0 )
         {
             confirm_password_text.setError("Password is required");
             confirm_password_text.requestFocus();
             valid=false;
         }
 
-        if(!password.equals(confirm_password))
+        if(!password_text.getText().equals(confirm_password_text.getText()))
         {
             confirm_password_text.setError("Password Not matched");
             confirm_password_text.requestFocus();
             valid=false;
         }
-        if(password.length()<6 && password.length()!=0)
+        if(password_text.getText().length()<6 && password_text.getText().length()!=0)
         {
             password_text.setError("Password should be atleast of 6 charactors");
             password_text.requestFocus();
             valid=false;
         }
-
-
-
         return valid;
     }
 

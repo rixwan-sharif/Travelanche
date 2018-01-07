@@ -16,12 +16,13 @@ public class LoginRequest extends StringRequest {
 
 
 
-    public LoginRequest(String phone,String password,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
+    public LoginRequest(String phone,String password,String device_token,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
         super(Method.POST,Config.Login_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
         params.put("password",password);
+        params.put("device_token",device_token);
     }
 
     @Override

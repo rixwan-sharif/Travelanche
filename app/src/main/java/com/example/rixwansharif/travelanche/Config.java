@@ -39,7 +39,7 @@ public class Config {
 
     //Keys for Sharedpreferences
     //This would be the name of our shared preferences
-    public static final String SHARED_PREF_NAME = "Travelanche_login";
+    public static final String SHARED_PREF_NAME = "Travelanche_SHARED_PREF";
 
     //This would be used to store the phone of current logged in user
     public static final String Phone_SHARED_PREF = "phone";
@@ -47,7 +47,7 @@ public class Config {
     public static final String L_Name_SHARED_PREF= "last_name";
     public static final String City_SHARED_PREF= "city";
     public static final String Image_SHARED_PREF= "image";
-
+    public static final String Device_Token= "device";
 
 
     //We will use this to store the boolean in sharedpreference to track user is loggedin or not

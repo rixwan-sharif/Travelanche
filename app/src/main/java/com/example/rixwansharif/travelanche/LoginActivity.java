@@ -177,14 +177,14 @@ public class LoginActivity extends AppCompatActivity {
 
         boolean valid=true;
 
-        if( phone_number.length() < 14)
+        if( phone_text.getText().length() < 14)
         {
 
             phone_text.setError("Phone Number is Required");
             phone_text.requestFocus();
             valid=false;
         }
-        if( password.length() == 0 )
+        if( pass_text.getText().length() == 0 )
         {
             pass_text.setError("Password is required");
             pass_text.requestFocus();
@@ -258,10 +258,8 @@ public class LoginActivity extends AppCompatActivity {
                         if ((jsonResponse.getString("response").equalsIgnoreCase("success"))) {
                             //Creating a shared preference
                             SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-
                             //Creating editor to store values to shared preferences
                             SharedPreferences.Editor editor = sharedPreferences.edit();
-
                             //Adding values to editor
                             editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, true);
                             editor.putString(Config.Phone_SHARED_PREF, phone_number);
@@ -269,21 +267,15 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString(Config.L_Name_SHARED_PREF, jsonResponse.getString("last_name"));
                             editor.putString(Config.City_SHARED_PREF, jsonResponse.getString("city"));
                             editor.putString(Config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
-
-
                             //Saving values to editor
                             editor.commit();
 
 
-
                             loading.dismiss();
-
-
                             //Starting profile activity
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
-
                         else
 
                         {
@@ -314,7 +306,7 @@ public class LoginActivity extends AppCompatActivity {
             };
 
 
-            LoginRequest loginRequest = new LoginRequest(phone_number, password, responseListener, errorListener);
+            LoginRequest loginRequest = new LoginRequest(phone_number, password,getDeviceToken(), responseListener, errorListener);
             RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
             queue.add(loginRequest);
         }
@@ -344,8 +336,15 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
+    }
 
+    private String getDeviceToken()
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
+        String token= sharedPreferences.getString(Config.Device_Token, "Not Available");
+
+        return token;
     }
 
     //store image

@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -171,6 +172,14 @@ public class MyTripsActivity extends AppCompatActivity{
                 parse_json_trip.trip_driver,parse_json_trip.trip_ac,parse_json_trip.bids_on_trip,phone_number);
 
         trip_listView.setAdapter(cr);
+
+        trip_listView.setSelection(3);
+
+
+    }
+
+    private void highlightItem(int position, View result) {
+            result.setBackgroundColor(getResources().getColor(R.color.button_pressed));
     }
 
 

@@ -3,7 +3,6 @@
     <string name="title_activity_splash_screen">Travelanche</string>
 
 
-
     <string name="title_activity_main__page_">Main_Page_Activity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_registration">RegistrationActivity</string>
@@ -28,8 +27,7 @@
     <string name="google_maps_key"> AIzaSyDuFgeiU6TK2pMBI8Yt1AJ58Sn6XyjMBDw</string>
 
 
-
-    <string name="city_prompt" >Choose a City</string>
+    <string name="city_prompt">Choose a City</string>
     <string-array name="destination_city_array">
         <item>Lahore</item>
         <item>Faislabad</item>
@@ -45,7 +43,6 @@
         <item>Karachi</item>
         <item>Other</item>
     </string-array>
-
 
 
     <string-array name="pickup_location_array">
@@ -75,8 +72,6 @@
     </string-array>
 
 
-
-
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

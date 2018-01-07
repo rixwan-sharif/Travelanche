@@ -10,8 +10,6 @@
         android:id="@+id/trips_listView"
         android:layout_centerHorizontal="true"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-
-        />
+        android:dividerHeight="10.0sp" />
 
 </RelativeLayout>

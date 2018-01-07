@@ -298,11 +298,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         phone= sharedPreferences.getString(Config.Phone_SHARED_PREF,"Not Available");
         name=sharedPreferences.getString(Config.F_Name_SHARED_PREF, "Not Available")+" "+sharedPreferences.getString(Config.L_Name_SHARED_PREF, "Not Available");
 
+
         username.setText(name);
         phone_number.setText(phone);
 
-        final String pic_path=sharedPreferences.getString(Config.Image_SHARED_PREF, "Not Available");
 
+        final String pic_path=sharedPreferences.getString(Config.Image_SHARED_PREF, "Not Available");
 
       Picasso.with(getApplicationContext())
                 .load("http://rixwanxharif.000webhostapp.com/" + pic_path)

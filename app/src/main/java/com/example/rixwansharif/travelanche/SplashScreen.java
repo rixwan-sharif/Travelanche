@@ -8,9 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SplashScreen extends AppCompatActivity {
+
+
 boolean loggedIn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,10 @@ boolean loggedIn;
         loggedIn = sharedPreferences.getBoolean(Config.LOGGEDIN_SHARED_PREF, false);
         //If we will get true
 
+        //ImageView sp=(ImageView) findViewById((R.id.rabia));
+
+        //Animation zm= AnimationUtils.loadAnimation(this,R.anim.splash_screen_anim);
+        //sp.startAnimation(zm);
 
         Thread myThread = new Thread() {
                 @Override
@@ -53,9 +62,9 @@ boolean loggedIn;
 
                 }
             };
-
             //Starting Thread
             myThread.start();
+
 
 
     }

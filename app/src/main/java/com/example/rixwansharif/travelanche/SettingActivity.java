@@ -143,10 +143,7 @@ public class SettingActivity extends AppCompatActivity {
                 final AlphaAnimation buttonClick = new AlphaAnimation(1.0F, 0.2F);
                 buttonClick.setDuration(250);
                 v.startAnimation(buttonClick);
-                Select_Pic();
-
-            }
-        });
+                Select_Pic();}});
 
 
 
@@ -390,22 +387,17 @@ public class SettingActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(String response)
                 {
-                    //Disimissing the progress dialog
-                    Toast.makeText(SettingActivity.this, response, Toast.LENGTH_LONG).show();
-
+                    loading.dismiss();
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
-                        loading.dismiss();
 
                       if ((jsonResponse.getString("response").equalsIgnoreCase("success"))) {
 
                             SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-                            //Getting editor
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.putString(Config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
                             editor.commit();
-
-                        }
+                      }
                         else {
                             Toast.makeText(SettingActivity.this, "Error Changing Picture !", Toast.LENGTH_LONG).show();
                         }
@@ -433,7 +425,6 @@ public class SettingActivity extends AppCompatActivity {
             };
 
             String string_image = getStringImage(bitmap);
-
             ChangeImageRequest changeImageRequest = new ChangeImageRequest(phone_number,string_image,old_image_link , responseListener, errorListener);
             RequestQueue queue = Volley.newRequestQueue(SettingActivity.this);
             queue.add(changeImageRequest);

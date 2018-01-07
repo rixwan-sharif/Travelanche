@@ -109,7 +109,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private boolean Validate()
     {
         boolean valid = true;
-        if( phone_number.length() < 14)
+        if( phone_number_text.getText().length() < 14)
         {
 
             phone_number_text.setError("Phone Number is Required");

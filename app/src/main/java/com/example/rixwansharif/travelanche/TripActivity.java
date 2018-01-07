@@ -302,7 +302,7 @@ public class TripActivity extends AppCompatActivity {
 
         String[] vehicleArray = getResources().getStringArray(R.array.vehicle_array);
 
-        final ListView list = (ListView) _Dialog.findViewById(R.id.vehilces_listView);
+        final ListView list = (ListView) _Dialog.findViewById(R.id.vehicles_listView);
         list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, vehicleArray));
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -339,7 +339,7 @@ public class TripActivity extends AppCompatActivity {
         //get string array from source
         String[] pickupLocationArray = getResources().getStringArray(R.array.pickup_location_array);
 
-        final ListView list = (ListView) _Dialog.findViewById(R.id.pickup_locations_listView);
+        final ListView list = (ListView) _Dialog.findViewById(R.id.pick_location_listView);
         list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, pickupLocationArray));
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -400,10 +400,11 @@ public class TripActivity extends AppCompatActivity {
 
     private void Post_Trip()
     {
-        Initialize();
+
 
         if(Validate())
         {
+            Initialize();
             Trip_Days=Calculate_Days(startdate, enddate);
             Post_Trip_Process();
 
@@ -468,36 +469,34 @@ public class TripActivity extends AppCompatActivity {
 
         boolean valid=true;
 
-        if(Destination.length() == 0)
+        if(destination.getText().length() == 0)
         {
             valid=false;
         }
-        if(Pickup_Location.length() == 0 )
+        if(pickup_location.getText().length() == 0 )
         {
             valid=false;
         }
-        if(Vehicle.length() == 0 )
+        if(vehicle.getText().length() == 0 )
         {
             valid=false;
         }
-
-        if(StartDate.length() == 0 )
+        if(start_date.getText().length() == 0 )
         {
             valid=false;
         }
-        if(EndDate.length() == 0 )
+        if(end_date.getText().length() == 0 )
         {
             valid=false;
         }
-        if(Pickup_Time.length() == 0 )
+        if(time_pickup.getText().length() == 0 )
         {
             valid=false;
         }
-        if(Drop_Time.length() == 0 )
+        if(time_drop.getText().length() == 0 )
         {
             valid=false;
         }
-
         return valid;
     }
 

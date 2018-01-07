@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rixwansharif.travelanche" >
+    package="com.example.rixwansharif.travelanche">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -8,6 +8,8 @@
     <uses-permission android:name="ANDROID.PERMISSION.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <supports-screens
         android:anyDensity="true"
@@ -21,10 +23,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".TripActivity"
-            android:label="@string/title_activity_splash_screen" >
+            android:name=".SplashScreen"
+            android:label="@string/title_activity_splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,51 +35,41 @@
         </activity>
         <activity
             android:name=".Main_Page_Activity"
-            android:label="@string/title_activity_main__page_" >
-        </activity>
+            android:label="@string/title_activity_main__page_"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".Main_Page_Activity" >
-        </activity>
+            android:parentActivityName=".Main_Page_Activity"></activity>
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
-            android:parentActivityName=".Main_Page_Activity" >
-        </activity>
+            android:parentActivityName=".Main_Page_Activity"></activity>
         <activity
             android:name=".ForgotPasswordActivity"
             android:label="@string/title_activity_forgot_password"
-            android:parentActivityName=".LoginActivity" >
-        </activity>
+            android:parentActivityName=".LoginActivity"></activity>
         <activity
             android:name=".NewPasswordActivity"
-            android:label="@string/title_activity_new_password" >
-        </activity>
+            android:label="@string/title_activity_new_password"></activity>
         <activity
             android:name=".UploadPhotoActivity"
-            android:label="@string/title_activity_upload_photo" >
-        </activity>
+            android:label="@string/title_activity_upload_photo"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Drawer_Theme" >
-        </activity>
+            android:theme="@style/Drawer_Theme"></activity>
         <activity
             android:name=".SettingActivity"
             android:label="@string/title_activity_setting"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
-            android:name=".SplashScreen"
+            android:name=".TripActivity"
             android:label="@string/title_activity_trip"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".CompaniesActivity"
             android:label="@string/title_activity_companies"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
@@ -86,26 +78,38 @@
         <activity
             android:name=".ContactUsActivity"
             android:label="@string/title_activity_contact_us"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".MyTripsActivity"
             android:label="@string/title_activity_my_trips"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".EditTripActivity"
             android:label="@string/title_activity_edit_trip"
-            android:parentActivityName=".MyTripsActivity" >
-        </activity>
+            android:parentActivityName=".MyTripsActivity"></activity>
         <activity
             android:name=".BidsOnTripActivity"
-            android:label="@string/title_activity_bids_on_trip" >
+            android:label="@string/title_activity_bids_on_trip">
+            <intent-filter>
+                <action android:name="com.example.rixwansharif.travelanche.TestActivty_TARGET" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".AcceptedBidsActivity"
-            android:label="@string/title_activity_accepted_bids" >
-        </activity>
+            android:label="@string/title_activity_accepted_bids"></activity>
+
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

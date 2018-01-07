@@ -78,9 +78,10 @@ public class NewPasswordActivity extends AppCompatActivity {
 
     private void Set_New_Password()
     {
-        Intialize();
+
         if(Validate())
         {
+            Intialize();
             Set_New_Password_Process();
 
         }
@@ -98,29 +99,31 @@ public class NewPasswordActivity extends AppCompatActivity {
 
         boolean valid=true;
 
-        if(password.length()<6 && password.length()!=0)
+        if( new_pass_text.getText().length() == 0 )
         {
-            password_text.setError("Password should be atleast of 6 charactors");
-            password_text.requestFocus();
+            new_pass_text.setError("Password is required");
+            new_pass_text.requestFocus();
             valid=false;
         }
-        if( confirm_password.length() == 0 )
+        if(new_pass_text.getText().length()<6 && new_pass_text.getText().length()!=0)
         {
-            confirm_password_text.setError("Password is required");
-            confirm_password_text.requestFocus();
+            new_pass_text.setError("Password should be atleast of 6 charactors");
+            new_pass_text.requestFocus();
+            valid=false;
+        }
+        if( cnfrm_new_pass_text.getText().length() == 0 )
+        {
+            cnfrm_new_pass_text.setError("Password is required");
+            cnfrm_new_pass_text.requestFocus();
             valid=false;
         }
 
-        if(!password.equals(confirm_password))
+        if(!new_pass_text.getText().equals(cnfrm_new_pass_text.getText()))
         {
-            confirm_password_text.setError("Password Not matched");
-            confirm_password_text.requestFocus();
+            cnfrm_new_pass_text.setError("Password Not matched");
+            cnfrm_new_pass_text.requestFocus();
             valid=false;
         }
-
-
-
-
         return valid;
     }
 
