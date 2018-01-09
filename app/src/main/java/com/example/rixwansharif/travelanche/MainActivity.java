@@ -2,22 +2,14 @@ package com.example.rixwansharif.travelanche;
 
 
 
-import android.app.FragmentManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.LightingColorFilter;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Environment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.GravityCompat;
@@ -30,33 +22,17 @@ import android.support.v7.app.NotificationCompat;
 import android.support.v7.internal.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.squareup.picasso.Callback;
-import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
-
-import junit.framework.*;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -246,19 +222,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     public void onClick(DialogInterface arg0, int arg1) {
 
                         //Getting out sharedpreferences
-                        SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                        SharedPreferences preferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                         //Getting editor
                         SharedPreferences.Editor editor = preferences.edit();
 
                         //Puting the value false for loggedin
-                        editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, false);
+                        editor.putBoolean(config.LOGGEDIN_SHARED_PREF, false);
 
                         //Putting blank value to email
-                        editor.putString(Config.Phone_SHARED_PREF, "");
-                        editor.putString(Config.F_Name_SHARED_PREF, "");
-                        editor.putString(Config.L_Name_SHARED_PREF, "");
-                        editor.putString(Config.City_SHARED_PREF, "");
-                        editor.putString(Config.Image_SHARED_PREF, "");
+                        editor.putString(config.Phone_SHARED_PREF, "");
+                        editor.putString(config.F_Name_SHARED_PREF, "");
+                        editor.putString(config.L_Name_SHARED_PREF, "");
+                        editor.putString(config.City_SHARED_PREF, "");
+                        editor.putString(config.Image_SHARED_PREF, "");
 
 
                         //Saving the sharedpreferences
@@ -293,17 +269,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        phone= sharedPreferences.getString(Config.Phone_SHARED_PREF,"Not Available");
-        name=sharedPreferences.getString(Config.F_Name_SHARED_PREF, "Not Available")+" "+sharedPreferences.getString(Config.L_Name_SHARED_PREF, "Not Available");
+        phone= sharedPreferences.getString(config.Phone_SHARED_PREF,"Not Available");
+        name=sharedPreferences.getString(config.F_Name_SHARED_PREF, "Not Available")+" "+sharedPreferences.getString(config.L_Name_SHARED_PREF, "Not Available");
 
 
         username.setText(name);
         phone_number.setText(phone);
 
 
-        final String pic_path=sharedPreferences.getString(Config.Image_SHARED_PREF, "Not Available");
+        final String pic_path=sharedPreferences.getString(config.Image_SHARED_PREF, "Not Available");
 
       Picasso.with(getApplicationContext())
                 .load("http://rixwanxharif.000webhostapp.com/" + pic_path)

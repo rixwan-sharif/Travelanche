@@ -56,9 +56,9 @@ public class BidsOnTripActivity extends AppCompatActivity {
         bids_listView=(ListView) findViewById(R.id.bids_listView);
 
         //set data
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         Bundle  intent_data=getIntent().getExtras();
-        User_Phone= sharedPreferences.getString(Config.Phone_SHARED_PREF,"Not Available");
+        User_Phone= sharedPreferences.getString(config.Phone_SHARED_PREF,"Not Available");
         Trip_id =intent_data.getString("trip_id");
 
         Load_Bids();
@@ -99,7 +99,7 @@ public class BidsOnTripActivity extends AppCompatActivity {
 
 
             //Creating an string request
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Load_Bids_URL,
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Load_Bids_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -297,12 +297,14 @@ public class BidsOnTripActivity extends AppCompatActivity {
 
 
                 //Creating an string request
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Accept_Bid_URL,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Accept_Bid_URL,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 loading.dismiss();
+
                                 Toast.makeText( BidsOnTripActivity.this, response, Toast.LENGTH_SHORT).show();
+
                                 Intent intent=new Intent(BidsOnTripActivity.this,MyTripsActivity.class);
                                 startActivity(intent);
                             }
@@ -361,5 +363,10 @@ public class BidsOnTripActivity extends AppCompatActivity {
     {
         super.onResume();
         Load_Bids();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,MyTripsActivity.class);
+        startActivity(intent);
     }
 }

@@ -18,7 +18,7 @@ public class ForgotpasswordRequest extends StringRequest {
 
     public ForgotpasswordRequest(String phone,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.ForgotPassword_URL,responseListener,errorListener);
+        super(Method.POST, config.ForgotPassword_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
 

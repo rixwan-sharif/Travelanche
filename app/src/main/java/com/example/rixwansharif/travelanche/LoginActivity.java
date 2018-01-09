@@ -2,16 +2,13 @@ package com.example.rixwansharif.travelanche;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,8 +16,6 @@ import android.text.Editable;
 import android.text.Selection;
 import android.text.TextWatcher;
 import android.util.Base64;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
@@ -34,18 +29,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -257,16 +245,16 @@ public class LoginActivity extends AppCompatActivity {
 
                         if ((jsonResponse.getString("response").equalsIgnoreCase("success"))) {
                             //Creating a shared preference
-                            SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                            SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                             //Creating editor to store values to shared preferences
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             //Adding values to editor
-                            editor.putBoolean(Config.LOGGEDIN_SHARED_PREF, true);
-                            editor.putString(Config.Phone_SHARED_PREF, phone_number);
-                            editor.putString(Config.F_Name_SHARED_PREF, jsonResponse.getString("first_name"));
-                            editor.putString(Config.L_Name_SHARED_PREF, jsonResponse.getString("last_name"));
-                            editor.putString(Config.City_SHARED_PREF, jsonResponse.getString("city"));
-                            editor.putString(Config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
+                            editor.putBoolean(config.LOGGEDIN_SHARED_PREF, true);
+                            editor.putString(config.Phone_SHARED_PREF, phone_number);
+                            editor.putString(config.F_Name_SHARED_PREF, jsonResponse.getString("first_name"));
+                            editor.putString(config.L_Name_SHARED_PREF, jsonResponse.getString("last_name"));
+                            editor.putString(config.City_SHARED_PREF, jsonResponse.getString("city"));
+                            editor.putString(config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
                             //Saving values to editor
                             editor.commit();
 
@@ -340,9 +328,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private String getDeviceToken()
     {
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        String token= sharedPreferences.getString(Config.Device_Token, "Not Available");
+        String token= sharedPreferences.getString(config.Device_Token, "Not Available");
 
         return token;
     }

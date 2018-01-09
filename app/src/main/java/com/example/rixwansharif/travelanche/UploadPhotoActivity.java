@@ -156,7 +156,6 @@ public class UploadPhotoActivity extends AppCompatActivity {
                                 });
 
                         AlertDialog alertDialog = alertDialogBuilder.create();
-
                         // show it
                         alertDialog.show();
                     }
@@ -351,7 +350,7 @@ public class UploadPhotoActivity extends AppCompatActivity {
 
         }
         try {
-            scaledBitmap = Bitmap.createBitmap(actualWidth, actualHeight, Bitmap.Config.ARGB_8888);
+            scaledBitmap = Bitmap.createBitmap(actualWidth, actualHeight, Bitmap.config.ARGB_8888);
         } catch (OutOfMemoryError exception) {
             exception.printStackTrace();
         }

@@ -18,7 +18,7 @@ public class SendOTPRequest extends StringRequest {
 
     public SendOTPRequest(String phone,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.SendOtp_URL,responseListener,errorListener);
+        super(Method.POST, config.SendOtp_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
 

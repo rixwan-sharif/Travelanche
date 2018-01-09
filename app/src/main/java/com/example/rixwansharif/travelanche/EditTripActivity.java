@@ -14,8 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
@@ -482,10 +480,10 @@ public class EditTripActivity extends AppCompatActivity {
 
         //Shared Prefe
 
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        User_City=sharedPreferences.getString(Config.City_SHARED_PREF, "Not Available").toString();
-        User_Phone=sharedPreferences.getString(Config.Phone_SHARED_PREF, "Not Available").toString();
+        User_City=sharedPreferences.getString(config.City_SHARED_PREF, "Not Available").toString();
+        User_Phone=sharedPreferences.getString(config.Phone_SHARED_PREF, "Not Available").toString();
 
     }
 
@@ -585,7 +583,7 @@ public class EditTripActivity extends AppCompatActivity {
 
 
                 //Creating an string request
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Edit_Trips_URL,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Edit_Trips_URL,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

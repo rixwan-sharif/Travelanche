@@ -7,26 +7,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.internal.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,9 +30,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -122,8 +112,8 @@ public class MyTripsActivity extends AppCompatActivity{
                 }
             };
 
-            SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-            phone_number=sharedPreferences.getString(Config.Phone_SHARED_PREF, "Not Available").toString();
+            SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+            phone_number=sharedPreferences.getString(config.Phone_SHARED_PREF, "Not Available").toString();
 
             FetchTripRequest fetchTripRequest = new FetchTripRequest(phone_number,"Pending", responseListener, errorListener);
             RequestQueue queue = Volley.newRequestQueue(MyTripsActivity.this);
@@ -456,7 +446,7 @@ public class MyTripsActivity extends AppCompatActivity{
                 }, 15000);
 
                 //Creating an string request
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Delete_User_Trip_URL,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Delete_User_Trip_URL,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -515,5 +505,9 @@ public class MyTripsActivity extends AppCompatActivity{
         super.onResume();
         Load_Trip();
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);}
 
 }

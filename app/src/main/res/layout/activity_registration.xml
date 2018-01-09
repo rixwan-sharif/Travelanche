@@ -41,10 +41,11 @@
                 android:hint="First Name"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="@dimen/p10"
+                android:paddingRight="@dimen/p15"
                 android:singleLine="true"
                 android:textSize="@dimen/s16"
-                android:maxLength="15" />
+                android:maxLength="15"
+                android:gravity="left|center" />
 
 
             <EditText
@@ -64,10 +65,11 @@
                 android:hint="Last Name"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="@dimen/p10"
+                android:paddingRight="@dimen/p15"
                 android:singleLine="true"
                 android:textSize="@dimen/s16"
-                android:maxLength="15" />
+                android:maxLength="15"
+                android:gravity="left|center" />
 
 
             <EditText
@@ -89,9 +91,10 @@
                 android:textColor="#000000"
                 android:maxLength="12"
                 android:phoneNumber="true"
-                android:paddingRight="@dimen/p10"
+                android:paddingRight="@dimen/p15"
                 android:singleLine="true"
-                android:textSize="@dimen/s16" />
+                android:textSize="@dimen/s16"
+                android:gravity="left|center" />
 
 
             <Spinner android:layout_width="@dimen/activity_registration_spinner_width"
@@ -133,10 +136,11 @@
 
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="@dimen/p10"
+                android:paddingRight="@dimen/p15"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="@dimen/s16" />
+                android:textSize="@dimen/s16"
+                android:gravity="left|center" />
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
@@ -153,11 +157,12 @@
                 android:hint="Confirm Password"
                 android:textColorHint="#a6083d29"
                 android:textColor="#000000"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/p15"
                 android:inputType="textPassword"
                 android:maxLength="15"
                 android:singleLine="true"
-                android:textSize="@dimen/s16" />
+                android:textSize="@dimen/s16"
+                android:gravity="left|center" />
 
 
             <Button

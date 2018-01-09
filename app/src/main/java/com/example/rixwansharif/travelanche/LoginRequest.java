@@ -1,6 +1,5 @@
 package com.example.rixwansharif.travelanche;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 
@@ -18,7 +17,7 @@ public class LoginRequest extends StringRequest {
 
     public LoginRequest(String phone,String password,String device_token,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.Login_URL,responseListener,errorListener);
+        super(Method.POST, config.Login_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
         params.put("password",password);

@@ -16,7 +16,7 @@ public class ChangePasswordRequest extends StringRequest {
 
     public ChangePasswordRequest(String phone,String c_password,String n_password,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.CHANGE_PASSWORD__URL,responseListener,errorListener);
+        super(Method.POST, config.CHANGE_PASSWORD__URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
         params.put("c_password",c_password);

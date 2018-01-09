@@ -30,7 +30,6 @@
                 android:layout_marginLeft="@dimen/m10"
                 android:layout_marginRight="@dimen/m10"
                 android:layout_height="@dimen/m45"
-                android:paddingTop="@dimen/p12"
                 android:textSize="@dimen/s15"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
@@ -39,7 +38,8 @@
                 android:textAlignment="center"
                 android:focusable="false"
                 android:paddingRight="@dimen/p15"
-                android:textColorHint="#545454" />
+                android:textColorHint="#545454"
+                android:gravity="left|center" />
 
             <TextView
                 android:layout_below="@+id/date_from_lable"
@@ -49,7 +49,6 @@
                 android:layout_marginLeft="@dimen/m10"
                 android:layout_marginRight="@dimen/m10"
                 android:layout_height="@dimen/m45"
-                android:paddingTop="@dimen/p12"
                 android:textSize="@dimen/s15"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
@@ -60,7 +59,8 @@
                 android:focusable="false"
                 android:clickable="false"
                 android:focusableInTouchMode="false"
-                android:textColorHint="#545454" />
+                android:textColorHint="#545454"
+                android:gravity="left|center" />
 
 
             <TextView
@@ -80,8 +80,8 @@
                 android:maxLength="12"
                 android:hint="Choose Pickup Location"
                 android:textAlignment="center"
-                android:paddingTop="@dimen/p12"
-                android:textColorHint="#545454" />
+                android:textColorHint="#545454"
+                android:gravity="left|center" />
 
             <TextView
                 android:layout_below="@+id/date_from_lable"
@@ -91,14 +91,14 @@
                 android:layout_marginLeft="@dimen/m10"
                 android:layout_marginRight="@dimen/m10"
                 android:layout_height="@dimen/m45"
-                android:paddingTop="@dimen/p12"
                 android:textSize="@dimen/s15"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
                 android:background="@drawable/plan_trip_textbox_shape"
                 android:paddingRight="@dimen/p15"
                 android:textColorHint="#545454"
-                android:hint="Choose Start Date" />
+                android:hint="Choose Start Date"
+                android:gravity="left|center" />
             <TextView
                 android:layout_below="@+id/Timr_pickup_lable"
                 android:id="@+id/Time_pickup"
@@ -109,13 +109,13 @@
                 android:layout_height="@dimen/m45"
 
                 android:textSize="@dimen/s15"
-                android:paddingTop="@dimen/p12"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
                 android:background="@drawable/plan_trip_textbox_shape"
                 android:paddingRight="@dimen/p15"
                 android:textColorHint="#545454"
-                android:hint="Choose Pickup Time" />
+                android:hint="Choose Pickup Time"
+                android:gravity="left|center" />
 
             <TextView
                 android:layout_below="@+id/date_to_lable"
@@ -127,13 +127,13 @@
                 android:layout_height="@dimen/m45"
 
                 android:textSize="@dimen/s15"
-                android:paddingTop="@dimen/p12"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
                 android:background="@drawable/plan_trip_textbox_shape"
                 android:paddingRight="@dimen/p15"
                 android:textColorHint="#545454"
-                android:hint="Choose End Date" />
+                android:hint="Choose End Date"
+                android:gravity="left|center" />
 
 
 
@@ -146,13 +146,13 @@
                 android:layout_marginRight="@dimen/m10"
                 android:layout_height="@dimen/m45"
                 android:textSize="@dimen/s15"
-                android:paddingTop="@dimen/p12"
                 android:paddingLeft="@dimen/p16"
                 android:textColor="#2a2a2a"
                 android:background="@drawable/plan_trip_textbox_shape"
                 android:paddingRight="@dimen/p15"
                 android:textColorHint="#545454"
-                android:hint="Choose Drop Time" />
+                android:hint="Choose Drop Time"
+                android:gravity="left|center" />
 
 
             <EditText
@@ -179,7 +179,7 @@
                 android:scrollbars="vertical"
                 android:textColorHint="#545454"
                 android:radius="@dimen/m10"
-                />
+                android:gravity="left|center" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

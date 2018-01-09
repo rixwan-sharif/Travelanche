@@ -115,6 +115,11 @@ public class TripActivity extends AppCompatActivity {
         radioGroup_ac=(RadioGroup) findViewById(R.id.radrio_grp_ac);
 
         //
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        User_Phone= sharedPreferences.getString(config.Phone_SHARED_PREF,"Not Available");
+        User_City=sharedPreferences.getString(config.City_SHARED_PREF, "Not Available");
         //set_date_time();
 
         //listeners
@@ -408,6 +413,24 @@ public class TripActivity extends AppCompatActivity {
             Trip_Days=Calculate_Days(startdate, enddate);
             Post_Trip_Process();
 
+
+            /* AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(TripActivity.this);
+            alertDialogBuilder
+                    .setMessage("Confirm Your Trip")
+                    .setMessage("● Trip to : "+ Destination +"\n\n" +
+                            "● From : "+ StartDate+"  To : "+ EndDate +"\n\n" +
+                            "● Pick At : "+ Pickup_Time+"  Drop At : "+ Drop_Time +"\n\n" +
+                            "● Pickup Location : "+ Pickup_Location +"\n\n"+
+                            "● Vehicle : "+ Vehicle +"\n\n"+
+                            "● Driver : "+ Driver+"  AC : "+ AC +"\n\n")
+                    .setCancelable(false)
+                    .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show(); */
         }
         else
         {
@@ -457,10 +480,10 @@ public class TripActivity extends AppCompatActivity {
 
         //Shared Prefe
 
-       // SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+       // SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-       // User_City=sharedPreferences.getString(Config.City_SHARED_PREF, "Not Available").toString();
-       // User_Phone=sharedPreferences.getString(Config.Phone_SHARED_PREF, "Not Available").toString();
+       // User_City=sharedPreferences.getString(config.City_SHARED_PREF, "Not Available").toString();
+       // User_Phone=sharedPreferences.getString(config.Phone_SHARED_PREF, "Not Available").toString();
 
     }
 
@@ -564,34 +587,21 @@ public class TripActivity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         loading_s.dismiss();
-
-
                         try {
-
                             if(response.equalsIgnoreCase("success"))
                             {
-
-                                Toast.makeText(TripActivity.this, "Good", Toast.LENGTH_LONG).show();
-
-                                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
-
-                                alertDialogBuilder.setTitle("Confirm Your Trip")
-                                        .setMessage("● Trip to : "+ Destination +"\n\n" +
-                                                "● From : "+ StartDate+"  To : "+ EndDate +"\n\n" +
-                                                "● Pick At : "+ Pickup_Time+"  Drop At : "+ Drop_Time +"\n\n" +
-                                                "● Pickup Location : "+ Pickup_Location +"\n\n"+
-                                                "● Vehicle : "+ Vehicle +"\n\n"+
-                                                "● Driver : "+ Driver+"  AC : "+ AC +"\n\n")
+                                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(TripActivity.this);
+                                alertDialogBuilder
+                                        .setTitle("Travelanche")
+                                        .setMessage("Your Trip has been posted.")
                                         .setCancelable(false)
-                                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
-
 
                                             }
                                         });
                                 AlertDialog alertDialog = alertDialogBuilder.create();
                                 alertDialog.show();
-
                             }
                             else
                             {

@@ -17,7 +17,7 @@ public class ChangeImageRequest  extends StringRequest {
 
     public ChangeImageRequest (String phone,String image,String old_image,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.Chaneg_Image_URL,responseListener,errorListener);
+        super(Method.POST, config.Chaneg_Image_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("phone",phone);
         params.put("image",image);

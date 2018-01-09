@@ -16,7 +16,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     @Override
     public void onTokenRefresh() {
 
-        Log.i("Firebaseidoio", "tokenid " + FirebaseInstanceId.getInstance().getToken());
+        Log.i("Firebase", "tokenid " + FirebaseInstanceId.getInstance().getToken());
 
         SaveDeviceToken(FirebaseInstanceId.getInstance().getToken());
 
@@ -25,11 +25,11 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private void SaveDeviceToken(String device_token)
     {
 
-        SharedPreferences sharedPreferences = MyFirebaseInstanceIDService.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = MyFirebaseInstanceIDService.this.getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
         //Creating editor to store values to shared preferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(Config.Device_Token, device_token);
+        editor.putString(config.Device_Token, device_token);
 
         //Saving values to editor
         editor.commit();

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,16 +11,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
@@ -38,18 +33,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Callback;
-import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
@@ -295,7 +285,7 @@ public class SettingActivity extends AppCompatActivity {
             }, 15000);
 
             //Creating an string request
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Update_Name_URL,
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Update_Name_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -303,13 +293,13 @@ public class SettingActivity extends AppCompatActivity {
 
                             if (response.equalsIgnoreCase("success"))
                             {
-                                SharedPreferences sharedPreferences = SettingActivity.this.getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                                SharedPreferences sharedPreferences = SettingActivity.this.getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                                 //Creating editor to store values to shared preferences
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 //Adding values to editor
 
-                                editor.putString(Config.F_Name_SHARED_PREF, fname);
-                                editor.putString(Config.L_Name_SHARED_PREF, lname);
+                                editor.putString(config.F_Name_SHARED_PREF, fname);
+                                editor.putString(config.L_Name_SHARED_PREF, lname);
                                 editor.commit();
 
                                 //
@@ -373,9 +363,9 @@ public class SettingActivity extends AppCompatActivity {
 
     private void Upload_Photo()
     {
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        String old_image_link=sharedPreferences.getString(Config.Image_SHARED_PREF, "Not Available").toString();
+        String old_image_link=sharedPreferences.getString(config.Image_SHARED_PREF, "Not Available").toString();
 
         if(cd.isConnected())
         {
@@ -393,9 +383,9 @@ public class SettingActivity extends AppCompatActivity {
 
                       if ((jsonResponse.getString("response").equalsIgnoreCase("success"))) {
 
-                            SharedPreferences preferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                            SharedPreferences preferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
-                            editor.putString(Config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
+                            editor.putString(config.Image_SHARED_PREF, jsonResponse.getString("image_path"));
                             editor.commit();
                       }
                         else {
@@ -702,18 +692,18 @@ public class SettingActivity extends AppCompatActivity {
 
 
 
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        fname=sharedPreferences.getString(Config.F_Name_SHARED_PREF, "Not Available").toString();
-        lname=sharedPreferences.getString(Config.L_Name_SHARED_PREF, "Not Available").toString();
-        phone_number=sharedPreferences.getString(Config.Phone_SHARED_PREF, "Not Available").toString();
+        fname=sharedPreferences.getString(config.F_Name_SHARED_PREF, "Not Available").toString();
+        lname=sharedPreferences.getString(config.L_Name_SHARED_PREF, "Not Available").toString();
+        phone_number=sharedPreferences.getString(config.Phone_SHARED_PREF, "Not Available").toString();
 
 
         name_text.setText(fname+" "+lname);
         phone_text.setText(phone_number);
-        city_text.setText(sharedPreferences.getString(Config.City_SHARED_PREF, "Not Available"));
+        city_text.setText(sharedPreferences.getString(config.City_SHARED_PREF, "Not Available"));
 
-        final String pic_path=sharedPreferences.getString(Config.Image_SHARED_PREF, "Not Available");
+        final String pic_path=sharedPreferences.getString(config.Image_SHARED_PREF, "Not Available");
 
 
        Picasso.with(getApplicationContext())

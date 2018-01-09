@@ -1,17 +1,12 @@
 package com.example.rixwansharif.travelanche;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,9 +15,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -85,7 +77,7 @@ public class CompaniesActivity extends AppCompatActivity {
 
             //fetch
 
-            StringRequest stringRequest = new StringRequest(Config.Load_Companies_URL,
+            StringRequest stringRequest = new StringRequest(config.Load_Companies_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

@@ -19,7 +19,7 @@ public class NewPasswordRequest extends StringRequest {
 
     public NewPasswordRequest(String phone,String new_password,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.SetNewPassword_URL,responseListener,errorListener);
+        super(Method.POST, config.SetNewPassword_URL,responseListener,errorListener);
         params=new HashMap<>();
         params.put("new_password",new_password);
         params.put("phone",phone);

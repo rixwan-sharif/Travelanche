@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 /**
  * Created by Rixwan Sharif on 7/15/2017.
  */
-public class Config {
+public class config {
 
     public static final String test_URL = "http://rixwanxharif.000webhostapp.com/test.php";
     public static final String Register_URL = "http://rixwanxharif.000webhostapp.com/register.php";

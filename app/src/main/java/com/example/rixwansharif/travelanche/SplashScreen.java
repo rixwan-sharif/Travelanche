@@ -6,12 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -25,9 +19,9 @@ boolean loggedIn;
 
         //Check if user alredy login
 
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         //Fetching the boolean value form sharedpreferences
-        loggedIn = sharedPreferences.getBoolean(Config.LOGGEDIN_SHARED_PREF, false);
+        loggedIn = sharedPreferences.getBoolean(config.LOGGEDIN_SHARED_PREF, false);
         //If we will get true
 
         //ImageView sp=(ImageView) findViewById((R.id.rabia));

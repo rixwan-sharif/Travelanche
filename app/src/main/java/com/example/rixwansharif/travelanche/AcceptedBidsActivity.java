@@ -11,15 +11,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,9 +47,9 @@ public class AcceptedBidsActivity extends AppCompatActivity {
 
         accepted_bid_listView = (ListView) findViewById(R.id.accepted_bid_listView);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(Config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        phone_number = sharedPreferences.getString(Config.Phone_SHARED_PREF,"Not Available");
+        phone_number = sharedPreferences.getString(config.Phone_SHARED_PREF,"Not Available");
 
         Load_Accepted_Bids();
     }
@@ -93,7 +88,7 @@ public class AcceptedBidsActivity extends AppCompatActivity {
             //fetch
 
             //Creating an string request
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Load_Accepted_Bids_URL,
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, config.Load_Accepted_Bids_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

@@ -89,15 +89,20 @@
             android:parentActivityName=".MyTripsActivity"></activity>
         <activity
             android:name=".BidsOnTripActivity"
-            android:label="@string/title_activity_bids_on_trip">
+            android:label="@string/title_activity_bids_on_trip"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="com.example.rixwansharif.travelanche.TestActivty_TARGET" />
+                <action android:name="com.example.rixwansharif.travelanche.Notification_TARGET" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
         <activity
             android:name=".AcceptedBidsActivity"
-            android:label="@string/title_activity_accepted_bids"></activity>
+            android:label="@string/title_activity_accepted_bids"
+            android:parentActivityName=".MainActivity"></activity>
+
+
 
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>

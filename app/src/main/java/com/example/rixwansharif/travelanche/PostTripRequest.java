@@ -20,7 +20,7 @@ public class PostTripRequest extends StringRequest {
                            String time_pickup,String time_drop,String location_pickup,String trip_description,
                            String user_phone,Response.Listener<String> responseListener,Response.ErrorListener errorListener)
     {
-        super(Method.POST,Config.Post_Trip_URL,responseListener,errorListener);
+        super(Method.POST, config.Post_Trip_URL,responseListener,errorListener);
         params=new HashMap<>();
 
         params.put("user_city",user_city);
