@@ -6,7 +6,7 @@
 
 
     <Button
-        android:layout_width="@dimen/activity_main__page_sign_up_btn_width"
+        android:layout_width="@dimen/w180"
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:id="@+id/sign_up_btn"
@@ -23,7 +23,7 @@
         android:id="@+id/sign_up_textview"
         android:layout_alignTop="@+id/sign_up_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_main_plan_my_trips_height"
+        android:layout_marginTop="@dimen/h80"
         android:text="Already have a Travalanche account?"
 
         android:textColor="#ffffff"
@@ -31,7 +31,7 @@
         />
 
     <Button
-        android:layout_width="@dimen/activity_main__page_set_new_pass_btn_width"
+        android:layout_width="@dimen/w180"
         android:layout_height="wrap_content"
         android:text="Log In"
         android:id="@+id/set_new_pass_btn"

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.rixwansharif.travelanche.AcceptedBidsActivity"
-    android:padding="6dp">
+    android:padding="@dimen/p6">
 
     <ListView
         android:layout_width="match_parent"

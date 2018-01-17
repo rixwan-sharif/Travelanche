@@ -16,8 +16,8 @@
             android:paddingBottom="@dimen/p20">
 
             <LinearLayout
-                android:layout_width="@dimen/activity_login_carlogo_width"
-                android:layout_height="@dimen/activity_login_carlogo_height"
+                android:layout_width="@dimen/w200"
+                android:layout_height="@dimen/h240"
                 android:layout_marginTop="@dimen/m85"
 
                 android:background="@drawable/register_logo"
@@ -28,7 +28,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_login_login_phone_number_text_height"
+                android:layout_height="@dimen/h50"
 
                 android:paddingLeft="@dimen/p10"
                 android:focusable="true"
@@ -56,7 +56,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
                 android:paddingLeft="@dimen/p10"
                 android:inputType="textPassword"
                 android:ems="10"
