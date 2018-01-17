@@ -288,15 +288,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
                                     String entered_otp = dialogue_editTextConfirmOtp.getText().toString().trim();
-
-
                                     if (sent_otp.equals(entered_otp)) {
                                         alertDialog2.dismiss();
-
-
                                         Register();
-
-
                                     }
                                     else
                                     {

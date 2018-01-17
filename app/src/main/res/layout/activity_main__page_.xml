@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:id="@+id/sign_up_btn"
-        android:background="@drawable/btn_shape"
+        android:background="@drawable/btn_shape_white"
         android:textColor="#01AA97"
         android:textSize="@dimen/s18"
         android:layout_alignParentBottom="true"
@@ -41,7 +41,7 @@
         android:layout_alignEnd="@+id/sign_up_btn"
         android:layout_alignLeft="@+id/sign_up_btn"
         android:layout_alignStart="@+id/sign_up_btn"
-        android:background="@drawable/btn_shape"
+        android:background="@drawable/btn_shape_white"
         android:textColor="#01AA97"
         android:textSize="@dimen/s18" />
 

@@ -604,12 +604,6 @@ public class TripActivity extends AppCompatActivity {
                                         });
                                 AlertDialog alertDialog = alertDialogBuilder.create();
                                 alertDialog.show();
-                                GradientDrawable gradientDrawable = new GradientDrawable(
-                                        GradientDrawable.Orientation.TOP_BOTTOM, //set a gradient direction
-                                        new int[] {0xFF757775,0xFF151515}); //set the color of gradient
-                                gradientDrawable.setCornerRadius(10f); //set corner radius
-                                alertDialog.getWindow().setBackgroundDrawable(gradientDrawable);
-                                alertDialog.show();
 
                             }
                             else

@@ -98,7 +98,7 @@
                 android:id="@+id/set_new_pass_btn"
                 android:layout_below="@+id/forgot_pass_textview"
                 android:layout_alignParentTop="true"
-                android:background="@drawable/btn_shape"
+                android:background="@drawable/btn_shape_white"
                 android:textColor="#01AA97"
                 android:textSize="@dimen/s18"
                 android:layout_marginTop="@dimen/m430"

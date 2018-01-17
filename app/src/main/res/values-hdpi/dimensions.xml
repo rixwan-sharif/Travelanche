@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="_m24">-18dp</dimen>
+    <dimen name="m210">157.5dp</dimen>
+    <dimen name="m90">67.5dp</dimen>
     <dimen name="w200">150dp</dimen>
+    <dimen name="w70">52.5dp</dimen>
+    <dimen name="h70">52.5dp</dimen>
+    <dimen name="m190">142.5dp</dimen>
+    <dimen name="h265">198dp</dimen>
     <dimen name="h240">180dp</dimen>
     <dimen name="h78">58.5dp</dimen>
     <dimen name="h50">37.5dp</dimen>

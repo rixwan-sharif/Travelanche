@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="From:"
+        android:text="Leaving From"
         android:textColor="#ffffff"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/s15"
@@ -21,11 +21,12 @@
         android:textSize="@dimen/s15"
         android:textColor="#ffffff"
 
-        />
+        android:backgroundTint="#ffffff"
+        android:id="@+id/find_ride_leaving_from" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To:"
+        android:text="Going To"
         android:textColor="#ffffff"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
@@ -39,11 +40,12 @@
         android:textSize="@dimen/s15"
         android:textColor="#ffffff"
 
-        />
+        android:backgroundTint="#ffffff"
+        android:id="@+id/find_ride_going_to" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date:"
+        android:text="Date"
         android:textColor="#ffffff"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/s15"
@@ -56,7 +58,8 @@
         android:textSize="@dimen/s15"
         android:textColor="#ffffff"
 
-        />
+        android:backgroundTint="#ffffff"
+        android:id="@+id/find_ride_leaving_date" />
 
 
         <Button
@@ -65,8 +68,10 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="@dimen/m20"
             android:layout_marginTop="40dp"
-            android:background="@drawable/button_whole"
-            android:text="Find"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/s20"/>
+            android:background="@drawable/btn_shape_white"
+            android:text="Find Ride"
+            android:textAllCaps="false"
+            android:textColor="#1c7c71"
+            android:textSize="@dimen/s20"
+            android:id="@+id/find_ride_btn" />
 </LinearLayout>

@@ -4,13 +4,18 @@
     <dimen name="h240">90dp</dimen>
     <dimen name="h78">29.25dp</dimen>
     <dimen name="h50">18.75dp</dimen>
-
+    <dimen name="m210">78.5dp</dimen>
     <dimen name="h80">30dp</dimen>
-
+    <dimen name="_m24">-9dp</dimen>
+    <dimen name="m90">33.75dp</dimen>
     <dimen name="w180">67.5dp</dimen>
-
-
+    <dimen name="w70">26.25dp</dimen>
+    <dimen name="h70">26.25dp</dimen>
+    <dimen name="m190">71.25dp</dimen>
     <dimen name="w120">45dp</dimen>
+    <dimen name="h265">99dp</dimen>
+
+
 
     <dimen name="w300">112.5dp</dimen>
     <dimen name="h300">112.5dp</dimen>

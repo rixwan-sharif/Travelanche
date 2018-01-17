@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -13,7 +14,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,11 +29,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AcceptedBidsActivity extends AppCompatActivity {
 
@@ -94,7 +102,7 @@ public class AcceptedBidsActivity extends AppCompatActivity {
                         public void onResponse(String response) {
                             loading.dismiss();
                             showJSON(response);
-                           // Toast.makeText(AcceptedBidsActivity.this, response, Toast.LENGTH_SHORT).show();
+                           //Toast.makeText(AcceptedBidsActivity.this, response, Toast.LENGTH_SHORT).show();
                         }
                     },
                     new Response.ErrorListener() {
@@ -142,77 +150,51 @@ public class AcceptedBidsActivity extends AppCompatActivity {
         parse_json_accepted_bids pj = new parse_json_accepted_bids(json);
         pj.parseJSON();
 
-        custom_row_for_accepted_bid cr=new custom_row_for_accepted_bid(this,parse_json_accepted_bids.id,parse_json_accepted_bids.trip_destination,parse_json_accepted_bids.trip_pickup_location,
-                parse_json_accepted_bids.trip_vehicle,parse_json_accepted_bids.trip_start_date,parse_json_accepted_bids.trip_end_date,
-                parse_json_accepted_bids.trip_pick_time,parse_json_accepted_bids.trip_drop_time,parse_json_accepted_bids.trip_driver,parse_json_accepted_bids.trip_ac,
-                parse_json_accepted_bids.company_name,parse_json_accepted_bids.company_number,parse_json_accepted_bids.company_address,parse_json_accepted_bids.bid_rate_per_day,
-                parse_json_accepted_bids.bid_total_fare,parse_json_accepted_bids.bids_on_trip,parse_json_accepted_bids.bid_vehicle,parse_json_accepted_bids.bid_vehicle_img);
+        custom_row_for_accepted_bid cr=new custom_row_for_accepted_bid(this,parse_json_accepted_bids.id,parse_json_accepted_bids.trip_destination
+                ,parse_json_accepted_bids.bid_vehicle,parse_json_accepted_bids.bid_vehicle_img,parse_json_accepted_bids.trip_id,
+                parse_json_accepted_bids.bid_accept_date,parse_json_accepted_bids.bid_accept_time,parse_json_accepted_bids.company_phone);
         accepted_bid_listView.setAdapter(cr);
     }
 
     public class custom_row_for_accepted_bid extends ArrayAdapter<String> {
 
 
-        private String[] id;
+        private String[] accepted_bid_id;
 
         // Trip
         private String[] trip_destination;
-        private String[] trip_pick_time;
-        private String[] trip_drop_time;
-        private String[] trip_pickup_location;
-        private String[] trip_vehicle;
-        private String[] trip_start_date;
-        private String[] trip_end_date;
-        private String[] trip_driver;
-        private String[] trip_ac;
+        private String[] trip_id;
 
 
         //Company
-        private String[] company_name;
-        private String[] company_number;
-        private String[] company_address;
+        private String[] company_phone;
 
         //Bid
-        private String[] bid_rate_per_day;
-        private String[] bid_total_fare;
-        private String[] bids_on_trip;
         private String[] bid_vehicle;
         private String[] bid_vehicle_img;
-
+        private String[] bid_accept_date;
+        private String[] bid_accept_time;
 
 
         private Activity context;
 
-        public custom_row_for_accepted_bid(Activity context, String[] id, String[] trip_destination, String[] trip_pickup_location, String[] trip_vehicle,
-                                           String[] trip_start_date, String[] trip_end_date,String[] trip_pick_time, String[] trip_drop_time,  String[] driver,
-                                           String[] ac,String[] company_name,String[] company_number,String[] company_address,
-                                           String[] bid_rate_per_day,String[] bid_total_fare,String[] bids_on_trip,String[] bid_vehicle,String[] bid_vehicle_img) {
-            super(context, R.layout.coustom_row_for_accepted_bid,id);
+        public custom_row_for_accepted_bid(Activity context, String[] accepted_bid_id, String[] trip_destination,String[] bid_vehicle,String[] bid_vehicle_img
+                                           ,String[] trip_id,String[] bid_accept_date,String[] bid_accept_time,String[] company_phone) {
+            super(context, R.layout.custom_row_for_trip_bid,accepted_bid_id);
             this.context = context;
 
-            this.id = id;
+            this.accepted_bid_id = accepted_bid_id;
             this.trip_destination = trip_destination;
-            this.trip_pickup_location = trip_pickup_location;
-            this.trip_pick_time = trip_pick_time;
-            this.trip_drop_time = trip_drop_time;
-            this.trip_vehicle = trip_vehicle;
-            this.trip_start_date = trip_start_date;
-            this.trip_end_date = trip_end_date;
-            this.trip_driver = driver;
-            this.trip_ac = ac;
+            this.trip_id = trip_id;
 
             //
-            this.company_name = company_name;
-            this.company_number = company_number;
-            this.company_address = company_address;
+            this.company_phone = company_phone;
 
             //
-            this.bid_rate_per_day = bid_rate_per_day;
-            this.bid_total_fare = bid_total_fare;
             this.bid_vehicle = bid_vehicle;
             this.bid_vehicle_img = bid_vehicle_img;
-            this.bids_on_trip = bids_on_trip;
-
+            this.bid_accept_date = bid_accept_date;
+            this.bid_accept_time = bid_accept_time;
 
         }
 
@@ -220,9 +202,68 @@ public class AcceptedBidsActivity extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             final LayoutInflater inflater = context.getLayoutInflater();
-            final View listViewItem = inflater.inflate(R.layout.coustom_row_for_accepted_bid, null, true);
+            final View listViewItem = inflater.inflate(R.layout.custom_row_for_trip_bid, null, true);
 
-            //Trip details
+            //
+            Button Trip_Button = (Button) listViewItem.findViewById(R.id.accepted_trip_trip_btn);
+            Button Bid_Button = (Button) listViewItem.findViewById(R.id.accepted_trip_bid_btn);
+            TextView Trip_Name = (TextView) listViewItem.findViewById(R.id.accepted_trip_destination_text);
+            TextView Vehicle_Name = (TextView) listViewItem.findViewById(R.id.accepted_trip_vehicle_text);
+            TextView Bid_Date = (TextView) listViewItem.findViewById(R.id.accepted_trip_bid_date_text);
+            TextView Bid_Time = (TextView) listViewItem.findViewById(R.id.accepted_trip_bid_time_text);
+            //final CircleImageView Client_Pic=(CircleImageView) listViewItem.findViewById(R.id.accepted_bid_client_pic);
+            final CircleImageView Vehicle_Pic=(CircleImageView) listViewItem.findViewById(R.id.accepted_trip_vehicle_image);
+
+            Trip_Name.setText(trip_destination[position]);
+            Vehicle_Name.setText(bid_vehicle[position]);
+            Bid_Date.setText(bid_accept_date[position]);
+            Bid_Time.setText(bid_accept_time[position]);
+
+
+            Picasso.with(getApplicationContext())
+                    .load("http://rixwanxharif.000webhostapp.com/uploads/" + "vehilce_image.jpg")
+                    .networkPolicy(NetworkPolicy.OFFLINE)
+                    .into(Vehicle_Pic, new Callback() {
+                        @Override
+                        public void onSuccess() {
+                        }
+
+                        @Override
+                        public void onError() {
+                            Picasso.with(getApplicationContext())
+                                    .load("http://rixwanxharif.000webhostapp.com/uploads/" + "vehilce_image.jpg")
+                                    .into(Vehicle_Pic);
+                        }
+                    });
+
+            Trip_Button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final AlphaAnimation buttonClick = new AlphaAnimation(1.0F, 0.2F);
+                    buttonClick.setDuration(175);
+                    v.startAnimation(buttonClick);
+                    Intent intent = new Intent(AcceptedBidsActivity.this, TripDetailActivity.class);
+                    intent.putExtra("trip_id", trip_id[position]);
+                    startActivity(intent);
+                }
+            });
+
+            Bid_Button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final AlphaAnimation buttonClick = new AlphaAnimation(1.0F, 0.2F);
+                    buttonClick.setDuration(175);
+                    v.startAnimation(buttonClick);
+                    Intent intent = new Intent(AcceptedBidsActivity.this, CompanyBidDetailActivity.class);
+                    intent.putExtra("accepted_bid_id", accepted_bid_id[position]);
+                    intent.putExtra("trip_id", trip_id[position]);
+                    intent.putExtra("company_phone", company_phone[position]);
+                    startActivity(intent);
+                }
+            });
+
+            //
+        /*    //Trip details
             TextView destination_text = (TextView) listViewItem.findViewById(R.id.accepted_bid_dest_text);
             TextView trip_vehicle_text = (TextView) listViewItem.findViewById(R.id.accepted_bid_trip_vehicle_text);
             TextView pick_loc_text = (TextView) listViewItem.findViewById(R.id.accepted_bid_pick_loc_text);
@@ -292,8 +333,7 @@ public class AcceptedBidsActivity extends AppCompatActivity {
             vehicle_detail_text.setText(bid_vehicle[position]);
             //Image Code
 
-
-
+*/
             return listViewItem ;
 
         }

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_row_shape">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="@dimen/m30"
+        android:layout_width="@dimen/w70"
+        android:layout_height="@dimen/h70"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/person"
+        android:id="@+id/trip_details_customer_pic_to_rental"/>
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:text="26/11/2014"
+        android:id="@+id/trip_details_date"
+
+        android:layout_marginTop="-55dp"
+        android:layout_marginLeft="290dp"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:text="03:00 pm"
+        android:id="@+id/trip_details_time"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="307dp"
+        android:textColor="#000000"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination :"
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/m40"
+        android:layout_below="@+id/customer_pic_to_rental"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_destination"
+        android:layout_below="@+id/coustomer_city_to_rental"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/h150"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup Location :"
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_below="@+id/customer_destination"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_pickup_location_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/m190"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_below="@+id/customer_pickup_location_to_rental"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_vehicle_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/h110"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_below="@+id/customer_pickup_location_to_rental"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yes"
+        android:id="@+id/trip_details_client_driver_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/h110"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AC :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="180dp"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="-24dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yes"
+        android:id="@+id/trip_details_client_AC_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="230dp"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_below="@+id/customer_pickup_location_to_rental"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_start_date_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/m90"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m210"
+
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_below="@+id/customer_pickup_location_to_rental"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_end_date_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/m253"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick :"
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m30"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/customer_pickup_location_to_rental"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_pick_time_to_rental"
+        android:layout_below="@+id/trip_details_client_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/m90"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drop :"
+
+        android:textColor="#1c7c71"
+        android:layout_marginLeft="@dimen/m210"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_below="@+id/customer_pickup_location_to_rental"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Medium text"
+        android:id="@+id/trip_details_client_drop_time_to_rental"
+        android:layout_below="@+id/customer_destination"
+        android:textSize="@dimen/s20"
+        android:layout_marginTop="@dimen/_m24"
+        android:layout_marginLeft="@dimen/h265"
+        android:textColor="#000000"
+        />
+
+</LinearLayout>

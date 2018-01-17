@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#ad7ab5">
-
+    android:background="#1c7c71">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/main_parent"
-        android:background="#01aa97">
+        android:background="#1c7c71">
         <ImageView
-            android:layout_width="@dimen/w80"
-            android:layout_height="@dimen/w80"
-            android:background="@drawable/person"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#ffffff"
             android:layout_marginTop="@dimen/m20"
-            android:layout_marginLeft="@dimen/m40"
-            android:id="@+id/bids_image_of_company"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Narcos"
-            android:id="@+id/bids_comp_name_text"
-            android:layout_alignTop="@+id/bids_image_of_company"
-            android:layout_toRightOf="@+id/bids_image_of_company"
-            android:layout_toEndOf="@+id/bids_image_of_company"
-            android:layout_marginLeft="@dimen/m15"
-            android:layout_marginTop="@dimen/m30"
-            android:textColor="#ffffff" />
+            android:layout_marginLeft="@dimen/m10"
+            android:id="@+id/bid_vehicle_image"
+            android:layout_marginRight="@dimen/m10" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +27,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="@dimen/m55"
-            android:layout_below="@+id/bids_image_of_company"
+            android:layout_below="@+id/bid_vehicle_image"
             android:layout_marginTop="@dimen/m15"
             android:textColor="#ffffff" />
 
@@ -52,11 +37,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Bachat"
             android:id="@+id/textView3"
-            android:layout_below="@+id/bids_image_of_company"
+            android:layout_below="@+id/bid_vehicle_image"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="@dimen/m15"
-            android:layout_marginLeft="@dimen/m55"
+            android:layout_marginLeft="@dimen/m45"
             android:textColor="#ffffff" />
 
         <TextView
@@ -75,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="5000000000000"
+            android:text="50000"
             android:id="@+id/bid_rate_per_day"
             android:layout_below="@+id/bid_vehicle"
             android:layout_alignLeft="@+id/bid_vehicle"
@@ -87,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="GLI 2009"
+            android:text="toyota corolla Gli 2009"
             android:id="@+id/bid_vehiclee"
             android:layout_below="@+id/textView4"
             android:layout_alignLeft="@+id/textView4"
@@ -125,45 +110,38 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="total"
-            android:id="@+id/accepted_trip_destination_text"
+            android:id="@+id/textView10"
             android:layout_alignTop="@+id/bid_total_fare"
             android:layout_toRightOf="@+id/bid_total_fare"
             android:layout_toEndOf="@+id/bid_total_fare"
             android:layout_marginTop="@dimen/m5"
             android:layout_marginLeft="@dimen/m5"
             android:textColor="#ffffff" />
-
-        <Button
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Accept Bid"
-            android:id="@+id/accept_bid_btn"
-            android:background="@drawable/signin_btn_shape"
-            android:layout_below="@+id/textView9"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="@dimen/m10"
-            android:layout_marginRight="@dimen/m10"
-            android:textAllCaps="false"
-            android:layout_marginTop="@dimen/m40"
-            android:textColor="#ffffff"
-            android:layout_marginBottom="@dimen/m10" />
+            android:layout_below="@id/textView9"
+            android:weightSum="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Narcos"
-            android:id="@+id/bids_date_time_text"
-            android:textColor="#ffffff"
-            android:layout_below="@+id/textView9"
-            android:layout_alignRight="@+id/bids_image_of_company"
-            android:layout_alignEnd="@+id/bids_image_of_company" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Company Details"
+                android:layout_weight="1"
+                android:id="@+id/company_detail_btn"
+                android:background="@drawable/btn_shape_white"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/m10"
+                android:layout_marginRight="@dimen/m10"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/m20"
+                android:textColor="#1c7c71"
+                android:layout_marginBottom="@dimen/m10" />
+        </LinearLayout>
+
 
     </RelativeLayout>
 
-
-
-
-
-</RelativeLayout>
+</LinearLayout>
