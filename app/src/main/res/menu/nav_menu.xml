@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <item android:id="@+id/notification" android:icon="@drawable/ic_noti_icon"
-            android:title="Notification" />
         <item android:id="@+id/my_trips" android:icon="@drawable/ic_car"
             android:title="Accepted Bids" />
         <item android:id="@+id/settings" android:icon="@drawable/ic_settings_icon"
             android:title="Setting" />
+        <item android:id="@+id/payments" android:icon="@drawable/ic_payment"
+         android:title="Payments" />
         <item android:id="@+id/logout" android:icon="@mipmap/logut_icon"
             android:title="Log out" />
 

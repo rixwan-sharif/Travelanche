@@ -8,7 +8,7 @@
     android:background="@android:color/transparent"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
     app:titleTextColor="#ffffff"
-    app:title=""
+    app:title="Travelanche"
     app:elevation="0dp">
 
 </android.support.v7.widget.Toolbar>
