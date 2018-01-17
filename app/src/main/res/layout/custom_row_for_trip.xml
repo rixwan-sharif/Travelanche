@@ -190,6 +190,7 @@
         android:layout_toEndOf="@+id/textView24"
         android:layout_marginLeft="@dimen/m8" />
 
+
     <ImageButton
         android:layout_width="@dimen/m40"
         android:layout_height="@dimen/m40"
@@ -230,7 +231,7 @@
         android:layout_height="@dimen/m38"
         android:orientation="horizontal"
         android:layout_below="@+id/textView23"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:background="#ffffff"
         android:id="@+id/mytrip_bottom_tab"
         android:visibility="visible">
@@ -301,6 +302,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date/time"
+        android:id="@+id/t_d_date_time_textview"
+        android:layout_below="@+id/t_d_from_textview"
+        android:layout_alignLeft="@+id/textView23"
+        android:layout_alignStart="@+id/textView23"
+        android:layout_marginTop="5dp" />
 
 
 </RelativeLayout>

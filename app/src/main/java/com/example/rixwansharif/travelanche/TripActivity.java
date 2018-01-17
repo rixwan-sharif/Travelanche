@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -286,7 +287,7 @@ public class TripActivity extends AppCompatActivity {
         // show it
         dest_inputDialog.show();
         dest_inputDialog.setCanceledOnTouchOutside(false);
-        dest_inputDialog.getWindow().setLayout(600, 800);
+        //dest_inputDialog.getWindow().setLayout(600, 800);
 
     }
 
@@ -597,11 +598,19 @@ public class TripActivity extends AppCompatActivity {
                                         .setCancelable(false)
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
-
+                                                Intent intent = new Intent(TripActivity.this, MyTripsActivity.class);
+                                                startActivity(intent);
                                             }
                                         });
                                 AlertDialog alertDialog = alertDialogBuilder.create();
                                 alertDialog.show();
+                                GradientDrawable gradientDrawable = new GradientDrawable(
+                                        GradientDrawable.Orientation.TOP_BOTTOM, //set a gradient direction
+                                        new int[] {0xFF757775,0xFF151515}); //set the color of gradient
+                                gradientDrawable.setCornerRadius(10f); //set corner radius
+                                alertDialog.getWindow().setBackgroundDrawable(gradientDrawable);
+                                alertDialog.show();
+
                             }
                             else
                             {

@@ -157,7 +157,7 @@ public class BidsOnTripActivity extends AppCompatActivity {
         pd.parseJSON();
 
         custom_row_for_bid cb = new custom_row_for_bid(this, parse_json_bid.bid_id,parse_json_bid.vehicle,parse_json_bid.bachat_price,parse_json_bid.lambsamb_price,
-                parse_json_bid.company_name,parse_json_bid.company_phone,parse_json_bid.company_image);
+                parse_json_bid.company_name,parse_json_bid.company_phone,parse_json_bid.company_image,parse_json_bid.date_time);
 
         bids_listView.setAdapter(cb);
     }
@@ -172,11 +172,12 @@ public class BidsOnTripActivity extends AppCompatActivity {
         private String[] company_name;
         private String[] company_phone;
         private String[] company_image;
+        private String[] date_time;
 
         private Activity context;
 
         public custom_row_for_bid(Activity context, String[] bid_id, String[] vehicle, String[] bachat_price, String[] lambsamb_price,
-                                  String[] company_name, String[] company_phone, String[] company_image) {
+                                  String[] company_name, String[] company_phone, String[] company_image,String[] date_time) {
             super(context, R.layout.custom_row_bid, bid_id);
             this.context = context;
 
@@ -187,6 +188,7 @@ public class BidsOnTripActivity extends AppCompatActivity {
             this.company_phone = company_phone;
             this.company_name = company_name;
             this.company_image = company_image;
+            this.date_time = date_time;
 
         }
 
@@ -201,6 +203,7 @@ public class BidsOnTripActivity extends AppCompatActivity {
             TextView vehiclee_txt = (TextView) listViewItem.findViewById(R.id.bid_vehiclee);
             TextView rate_per_day_txt = (TextView) listViewItem.findViewById(R.id.bid_rate_per_day);
             TextView total_fare_txt = (TextView) listViewItem.findViewById(R.id.bid_total_fare);
+            TextView date_time_txt = (TextView) listViewItem.findViewById(R.id.bids_date_time_text);
 
             final ImageView comp_image = (ImageView) listViewItem.findViewById(R.id.bids_image_of_company);
 
@@ -227,6 +230,7 @@ public class BidsOnTripActivity extends AppCompatActivity {
 
 
             company_txt.setText(company_name[position]);
+            date_time_txt.setText(date_time[position]);
 
             if (bachat_price[position].equals("0")) {
                 rate_per_day_txt.setText("N/A");

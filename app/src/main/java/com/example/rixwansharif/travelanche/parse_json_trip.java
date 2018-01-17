@@ -23,6 +23,7 @@ public class parse_json_trip {
     public static String[] trip_end_date;
     public static String[] trip_driver;
     public static String[] trip_ac;
+    public static String[] trip_date_time;
     public static String[] bids_on_trip;
 
 
@@ -55,6 +56,7 @@ public class parse_json_trip {
             trip_end_date = new String[my_trips.length()];
             trip_driver = new String[my_trips.length()];
             trip_ac = new String[my_trips.length()];
+            trip_date_time=new String[my_trips.length()];
             bids_on_trip = new String[my_trips.length()];
 
 
@@ -73,6 +75,7 @@ public class parse_json_trip {
                 trip_end_date[i] = jo.getString("date_to");
                 trip_driver[i] = jo.getString("driver");
                 trip_ac[i] = jo.getString("ac");
+                trip_date_time[i] = jo.getString("date_time");
                 bids_on_trip[i] = jo.getString("bids_on_trip");
             }
         }

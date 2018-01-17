@@ -16,6 +16,7 @@ public class parse_json_bid {
     public static String[] company_name;
     public static String[] company_phone;
     public static String[] company_image;
+    public static String[] date_time;
 
     private JSONArray bids_on_trip = null;
 
@@ -44,6 +45,7 @@ public class parse_json_bid {
             company_name=new String[bids_on_trip.length()];
             company_phone = new String[bids_on_trip.length()];
             company_image =new String[bids_on_trip.length()];
+            date_time=new String[bids_on_trip.length()];
 
             for (int i = 0; i < bids_on_trip.length(); i++)
             {
@@ -57,6 +59,7 @@ public class parse_json_bid {
                 company_image[i]=jo.getString("company_image");
                 company_name[i] = jo.getString("company_name");
                 company_phone[i] = jo.getString("company_phone");
+                date_time[i] = jo.getString("date_time");
 
             }
         }
