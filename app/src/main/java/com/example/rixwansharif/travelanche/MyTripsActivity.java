@@ -159,7 +159,7 @@ public class MyTripsActivity extends AppCompatActivity{
 
         custom_row_for_trip cr = new custom_row_for_trip(this, parse_json_trip.trip_id,parse_json_trip.trip_destination,
                 parse_json_trip.trip_pickup_location,parse_json_trip.trip_pick_time,parse_json_trip.trip_drop_time,parse_json_trip.trip_vehicle,parse_json_trip.trip_start_date,parse_json_trip.trip_end_date,
-                parse_json_trip.trip_driver,parse_json_trip.trip_ac,parse_json_trip.bids_on_trip,phone_number);
+                parse_json_trip.trip_driver,parse_json_trip.trip_ac,parse_json_trip.trip_date_time,parse_json_trip.bids_on_trip,phone_number);
 
         trip_listView.setAdapter(cr);
 
@@ -187,6 +187,7 @@ public class MyTripsActivity extends AppCompatActivity{
         private String[] trip_end_date;
         private String[] trip_driver;
         private String[] trip_ac;
+        private String[] date_time;
         private String[] bids_on_trip;
 
         String Phone;
@@ -194,7 +195,7 @@ public class MyTripsActivity extends AppCompatActivity{
 
         public custom_row_for_trip(Activity context,String[] trip_id, String[] trip_destination, String[] trip_pickup_location,String[] trip_pick_time,
                                    String[] trip_drop_time,String[] trip_vehicle, String[] trip_start_date,String[] trip_end_date,String[] driver,
-                                   String[] ac,String[] bids_on_trip,String phone_number)
+                                   String[] ac,String[] date_time,String[] bids_on_trip,String phone_number)
         {
             super(context, R.layout.custom_row_for_trip,trip_id);
             this.context = context;
@@ -209,6 +210,7 @@ public class MyTripsActivity extends AppCompatActivity{
             this.trip_end_date = trip_end_date;
             this.trip_driver = driver;
             this.trip_ac = ac;
+            this.date_time=date_time;
             this.bids_on_trip=bids_on_trip;
             this.Phone=phone_number;
 
@@ -230,6 +232,7 @@ public class MyTripsActivity extends AppCompatActivity{
             TextView to_date = (TextView) listViewItem.findViewById(R.id.t_d_to_textview);
             TextView driver = (TextView) listViewItem.findViewById(R.id.t_d_driver_textview);
             TextView ac = (TextView) listViewItem.findViewById(R.id.t_d_ac_textview);
+            TextView date_time_text = (TextView) listViewItem.findViewById(R.id.t_d_date_time_textview);
             TextView bids_text = (TextView) listViewItem.findViewById(R.id.bids_on_trip_text);
 
             ImageButton view_btn=(ImageButton) listViewItem.findViewById(R.id.trip_view_btn);
@@ -249,6 +252,7 @@ public class MyTripsActivity extends AppCompatActivity{
             Vehicle.setText(trip_vehicle[position]);
             from_date.setText(trip_start_date[position]);
             to_date.setText(trip_end_date[position]);
+            date_time_text.setText(date_time[position]);
             bids_text.setText(bids_on_trip[position]);
             my_trip_status_btn.setText("Status: Pending");
 

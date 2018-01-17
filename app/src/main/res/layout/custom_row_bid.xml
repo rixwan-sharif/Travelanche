@@ -29,7 +29,7 @@
             android:layout_alignTop="@+id/bids_image_of_company"
             android:layout_toRightOf="@+id/bids_image_of_company"
             android:layout_toEndOf="@+id/bids_image_of_company"
-            android:layout_marginLeft="@dimen/m30"
+            android:layout_marginLeft="@dimen/m15"
             android:layout_marginTop="@dimen/m30"
             android:textColor="#ffffff" />
 
@@ -145,9 +145,20 @@
             android:layout_marginLeft="@dimen/m10"
             android:layout_marginRight="@dimen/m10"
             android:textAllCaps="false"
-            android:layout_marginTop="@dimen/m20"
+            android:layout_marginTop="@dimen/m40"
             android:textColor="#ffffff"
             android:layout_marginBottom="@dimen/m10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Narcos"
+            android:id="@+id/bids_date_time_text"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textView9"
+            android:layout_alignRight="@+id/bids_image_of_company"
+            android:layout_alignEnd="@+id/bids_image_of_company" />
 
     </RelativeLayout>
 

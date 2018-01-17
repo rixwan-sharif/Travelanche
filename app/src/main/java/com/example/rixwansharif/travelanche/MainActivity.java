@@ -172,12 +172,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         int id = menuItem.getItemId();
-
-        if(id==R.id.notification)
-        {
-
-        }
-
         if(id==R.id.my_trips)
         {
             Intent intent=new Intent(MainActivity.this,AcceptedBidsActivity.class);
@@ -298,16 +292,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 .into(profile_imageView);
                     }
                 });
-
-
-
     }
 
-
     //
-
-
-
     public static Bitmap getBitmapImage(String input) {
         byte[] decodedByte = Base64.decode(input, 0);
         return BitmapFactory
