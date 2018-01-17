@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+=======
+<<<<<<< HEAD
+>>>>>>> aa1bae3a5b08da8f4c903cec2e136b9ab1fae22e
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
@@ -27,6 +31,11 @@
       </value>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e5eca8a9f03cca0f80ca96e8f6d46cc5012b8f8
+>>>>>>> aa1bae3a5b08da8f4c903cec2e136b9ab1fae22e
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />

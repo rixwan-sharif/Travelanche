@@ -15,8 +15,8 @@
             android:focusable="true" android:focusableInTouchMode="true"
             >
             <LinearLayout
-                android:layout_width="@dimen/activity_login_carlogo_width"
-                android:layout_height="@dimen/activity_login_carlogo_height"
+                android:layout_width="@dimen/w200"
+                android:layout_height="@dimen/h240"
                 android:layout_marginTop="@dimen/m50"
 
                 android:background="@drawable/register_logo"
@@ -25,7 +25,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
 
                 android:paddingLeft="@dimen/p10"
 
@@ -34,7 +34,7 @@
                 android:id="@+id/first_name"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/activity_login_carlogo_width"
+                android:layout_marginTop="@dimen/w200"
                 android:background="@drawable/sign_edit_text_shape"
                 android:layout_marginLeft="@dimen/m20"
                 android:layout_marginRight="@dimen/m20"
@@ -50,7 +50,7 @@
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
                 android:paddingLeft="@dimen/p10"
 
                 android:ems="10"
@@ -74,7 +74,7 @@
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
                 android:paddingLeft="@dimen/p10"
 
                 android:ems="10"
@@ -97,8 +97,8 @@
                 android:gravity="left|center" />
 
 
-            <Spinner android:layout_width="@dimen/activity_registration_spinner_width"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+            <Spinner android:layout_width="@dimen/w360"
+                android:layout_height="@dimen/h50"
 
                 android:id="@+id/spCities"
 
@@ -118,7 +118,7 @@
 
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
                 android:paddingLeft="@dimen/p10"
                 android:inputType="textPassword"
 
@@ -143,7 +143,7 @@
                 android:gravity="left|center" />
             <EditText
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                android:layout_height="@dimen/h50"
                 android:paddingLeft="@dimen/p10"
                 android:ems="10"
                 android:id="@+id/signup_confirm_password"

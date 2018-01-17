@@ -12,8 +12,8 @@
         android:id="@+id/main_parent"
         android:background="#01aa97">
         <ImageView
-            android:layout_width="@dimen/activity_custom_row_bid_bids_image_of_company"
-            android:layout_height="@dimen/activity_custom_row_bid_bids_image_of_company"
+            android:layout_width="@dimen/w80"
+            android:layout_height="@dimen/w80"
             android:background="@drawable/person"
             android:layout_marginTop="@dimen/m20"
             android:layout_marginLeft="@dimen/m40"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="GLI 2009"
+            android:text="toyota corolla Gli 2009"
             android:id="@+id/bid_vehicle"
             android:layout_below="@+id/textView3"
             android:layout_alignLeft="@+id/textView3"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="5000"
+            android:text="5000000000000"
             android:id="@+id/bid_rate_per_day"
             android:layout_below="@+id/bid_vehicle"
             android:layout_alignLeft="@+id/bid_vehicle"

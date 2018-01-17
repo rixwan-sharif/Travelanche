@@ -30,8 +30,8 @@
                 android:orientation="vertical">
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/activity_main_plan_a_trip_height"
-                    android:layout_marginTop="@dimen/activity_login_carlogo_width"
+                    android:layout_height="@dimen/h80"
+                    android:layout_marginTop="@dimen/w200"
                     android:text="Plan Your Trip"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/m20"
@@ -43,7 +43,7 @@
                     android:id="@+id/plan_a_trip" />
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/activity_main_plan_my_trips_height"
+                    android:layout_height="@dimen/h80"
                     android:layout_marginTop="@dimen/m20"
                     android:text=" My Trip"
                     android:layout_marginRight="@dimen/m30"
@@ -56,7 +56,7 @@
                 <Button
                     android:layout_marginRight="@dimen/m30"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/activity_main_plan_my_trips_height"
+                    android:layout_height="@dimen/h80"
                     android:layout_marginTop="@dimen/m20"
                     android:text="Companies"
                     android:textColor="#ffffff"

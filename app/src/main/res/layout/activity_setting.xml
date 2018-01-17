@@ -19,15 +19,15 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/person"
                 android:layout_marginLeft="95dp"
-                android:layout_width="@dimen/activity_main__page_sign_up_btn_width"
-                android:layout_height="@dimen/activity_main__page_sign_up_btn_width"
+                android:layout_width="@dimen/w180"
+                android:layout_height="@dimen/w180"
                 android:id="@+id/setting_profile_pic" />
 
             <Button
-                android:layout_width="@dimen/activity_setting_setting_camera_btn_width"
+                android:layout_width="@dimen/w54"
                 android:layout_marginTop="170dp"
                 android:layout_marginLeft="220dp"
-                android:layout_height="@dimen/activity_setting_setting_camera_btn_height"
+                android:layout_height="@dimen/h54"
                 android:id="@+id/setting_camera_btn"
                 android:background="@drawable/cameraee"
                 android:layout_gravity="center_vertical"></Button>
@@ -35,7 +35,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_setting_relativeLayout_height"
+                android:layout_height="@dimen/h105"
                 android:layout_below="@+id/setting_camera_btn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="45dp"
@@ -69,8 +69,8 @@
                     android:textSize="@dimen/s18" />
 
                 <ImageButton
-                    android:layout_width="@dimen/activity_login_new_cnfrm_pass_text_height"
-                    android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                    android:layout_width="@dimen/h50"
+                    android:layout_height="@dimen/h50"
                     android:id="@+id/setting_name_btn"
                     android:src="@mipmap/ic_mode_editp"
                     android:background="#ffffff"
@@ -80,8 +80,8 @@
                     android:layout_alignParentEnd="true" />
 
                 <ImageButton
-                    android:layout_width="@dimen/activity_login_new_cnfrm_pass_text_height"
-                    android:layout_height="@dimen/activity_login_new_cnfrm_pass_text_height"
+                    android:layout_width="@dimen/h50"
+                    android:layout_height="@dimen/h50"
                     android:id="@+id/setting_pass_btn"
                     android:src="@mipmap/ic_mode_editp"
                     android:background="#ffffff"
@@ -94,7 +94,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/activity_setting_relativeLayout_height_"
+                android:layout_height="@dimen/h150"
                 android:background="@drawable/loweree2"
                 android:layout_below="@+id/relativeLayout"
                 android:layout_alignParentLeft="true"
@@ -143,8 +143,8 @@
                     android:layout_marginTop="28dp" />
 
                 <ImageButton
-                    android:layout_width="@dimen/activity_setting_setting_city_btn_width_"
-                    android:layout_height="@dimen/activity_setting_setting_city_btn_height_"
+                    android:layout_width="@dimen/w60"
+                    android:layout_height="@dimen/h40"
                     android:id="@+id/setting_city_btn"
                     android:src="@mipmap/ic_mode_editp"
                     android:background="#ffffff"

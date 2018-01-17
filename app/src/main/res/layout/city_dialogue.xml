@@ -19,8 +19,8 @@
          />
 
     <ScrollView
-        android:layout_width="@dimen/activity_login_carlogo_width"
-        android:layout_height="@dimen/activity_image_upload_imageView_width"
+        android:layout_width="@dimen/w200"
+        android:layout_height="@dimen/w250"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/m40"

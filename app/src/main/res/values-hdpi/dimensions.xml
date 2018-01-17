@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_login_carlogo_width">150dp</dimen>
-    <dimen name="activity_contact_us_height">180dp</dimen>
-    <dimen name="activity_login_carlogo_height">58.5dp</dimen>
-    <dimen name="activity_login_login_phone_number_text_height">37.5dp</dimen>
-    <dimen name="activity_login_new_cnfrm_pass_text_height">37.5dp</dimen>
-    <dimen name="activity_login_forgot_pass_textview">11.25sp</dimen>
-    <dimen name="activity_login_set_new_pass_btn_text">13.125sp</dimen>
-    <dimen name="activity_main_plan_a_trip_height">60dp</dimen>
-    <dimen name="activity_main_plan_my_trips_height">60dp</dimen>
-    <dimen name="activity_main_plan_companies_height">60dp</dimen>
-    <dimen name="activity_main__page_sign_up_btn_width">135dp</dimen>
-    <dimen name="activity_main__page_set_new_pass_btn_width">135dp</dimen>
-    <dimen name="activity_main__page_sign_up_btn__textsize">13.125sp</dimen>
-    <dimen name="activity_main__page_set_new_pass_btn_textsize">13.125sp</dimen>
-    <dimen name="activity_forgot_password_forgot_pass_phone_text_height">37.5dp</dimen>
-    <dimen name="activity_forgot_password_forgot_set_new_pass_btn_width">90dp</dimen>
-    <dimen name="activity_forgot_password_forgot_set_new_pass_btn_textsize">11.25sp</dimen>
-    <dimen name="activity_image_upload_imageView_width">225dp</dimen>
-    <dimen name="activity_image_upload_imageView_height">225dp</dimen>
-    <dimen name="activity_registration_spinner_width">270dp</dimen>
-    <dimen name="activity_setting_setting_camera_btn_width">40.5dp</dimen>
-    <dimen name="activity_setting_setting_camera_btn_height">40.5dp</dimen>
-    <dimen name="activity_setting_relativeLayout_height">78.75dp</dimen>
-    <dimen name="activity_setting_relativeLayout_height_">112.5dp</dimen>
-    <dimen name="activity_setting_setting_city_btn_height_">30dp</dimen>
-    <dimen name="activity_setting_setting_city_btn_width_">45dp</dimen>
-    <dimen name="activity_upload_photo_imageView_width">187.5dp</dimen>
-    <dimen name="activity_upload_photo_imageView_height">187.5dp</dimen>
+    <dimen name="w200">150dp</dimen>
+    <dimen name="h240">180dp</dimen>
+    <dimen name="h78">58.5dp</dimen>
+    <dimen name="h50">37.5dp</dimen>
+    <dimen name="h80">60dp</dimen>
+    <dimen name="w180">135dp</dimen>
+    <dimen name="w120">90dp</dimen>
+    <dimen name="w300">225dp</dimen>
+    <dimen name="h300">225dp</dimen>
+    <dimen name="w360">270dp</dimen>
+    <dimen name="w54">40.5dp</dimen>
+    <dimen name="h54">40.5dp</dimen>
+    <dimen name="h105">78.75dp</dimen>
+    <dimen name="h150">112.5dp</dimen>
+    <dimen name="h40">30dp</dimen>
+    <dimen name="w60">45dp</dimen>
+    <dimen name="w250">187.5dp</dimen>
+    <dimen name="h250">187.5dp</dimen>
     <dimen name="p1">0.75dp</dimen>
     <dimen name="p2">1.5dp</dimen>
     <dimen name="p3">2.25dp</dimen>
@@ -228,8 +218,9 @@
     <dimen name="p75">56.25dp</dimen>
     <dimen name="m80">60dp</dimen>
     <dimen name="p80">60dp</dimen>
-    <dimen name="activity_custom_row_bid_bids_image_of_company">60dp</dimen>
-    <dimen name="nav_header_profile_image">82.5dp</dimen>
-    <dimen name="nav_header_height">120dp</dimen>
+
+    <dimen name="w80">60dp</dimen>
+    <dimen name="h110">82.5dp</dimen>
+    <dimen name="h160">120dp</dimen>
 
 </resources>
