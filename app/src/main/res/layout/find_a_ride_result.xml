@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bd1c7c71">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1c7c71"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#1c7c71"
+
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salman"
+            android:id="@+id/user_name"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/s18"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:layout_below="@+id/user_name"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/s18"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="55dp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/right_layout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 seats left"
+                android:textSize="@dimen/s18"
+                android:textColor="#ffffff"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 per seat"
+                android:textSize="@dimen/s18"
+                android:textColor="#ffffff"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/checkBox"
+
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Wed 14 Jan" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From lahore ---> multan"
+            android:id="@+id/checkBox2"
+            android:paddingLeft="5dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:checked="true"
+            android:textColor="#ffffff"
+            android:button="@drawable/xml_button"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punjab university gate 10"
+            android:id="@+id/checkBox3"
+            android:drawablePadding="5dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="18sp"
+            android:checked="true"
+            android:textColor="#ffffff"
+            android:drawableLeft="@drawable/pick_button"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faizabad ada"
+            android:id="@+id/checkBox4"
+            android:drawablePadding="5dp"
+
+
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="18sp"
+            android:checked="true"
+            android:textColor="#ffffff"
+            android:drawableLeft="@drawable/drop_of_bacak"
+
+            />
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_shape"
+        android:textColor="#1c7c71"
+        android:text="Request for sharing"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp" />
+</LinearLayout>
+
+
+
+</LinearLayout>
